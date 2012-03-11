@@ -203,6 +203,9 @@ public:
 	bool hasExtension(const std::string & ext);
 	/// path without file name
 	FileName onlyPath() const;
+	/// path of parent directory
+	/// returns empty path for root directory
+	FileName parentPath() const;
 	/// used for display in the Gui
 	docstring displayName(int threshold = 1000) const;
 
