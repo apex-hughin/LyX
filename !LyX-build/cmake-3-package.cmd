@@ -1,0 +1,11 @@
+@ECHO OFF
+CMAKE --build . --config MinSizeRel --target PACKAGE
+IF %ERRORLEVEL% NEQ 0 GOTO PACKAGEERROR
+GOTO END
+
+:PACKAGEERROR
+ECHO %~n0%~x0: packaging error: %ERRORLEVEL%
+GOTO END
+
+:END
+PAUSE

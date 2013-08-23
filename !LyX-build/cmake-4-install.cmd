@@ -1,0 +1,11 @@
+@ECHO OFF
+CMAKE --build . --config MinSizeRel --target INSTALL
+IF %ERRORLEVEL% NEQ 0 GOTO INSTALLERROR
+GOTO END
+
+:INSTALLERROR
+ECHO %~n0%~x0: install error: %ERRORLEVEL%
+GOTO END
+
+:END
+PAUSE

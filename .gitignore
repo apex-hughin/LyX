@@ -1,5 +1,6 @@
 *.o
 *~
+!LyX-install/
 .deps/
 Makefile
 Makefile.in
