@@ -1,0 +1,18 @@
+@ECHO OFF
+CALL run_cmake.bat
+IF %ERRORLEVEL% NEQ 0 GOTO CMAKEERROR
+
+CMAKE --build . --clean-first --config MinSizeRel -- /m
+IF %ERRORLEVEL% NEQ 0 GOTO BUILDERROR
+GOTO END
+
+:CMAKEERROR
+ECHO %~n0%~x0: cmake error: %ERRORLEVEL%
+GOTO END
+
+:BUILDERROR
+ECHO %~n0%~x0: build error: %ERRORLEVEL%
+GOTO END
+
+:END
+PAUSE

@@ -1,0 +1,26 @@
+cmake D:/Workspace/LyX  <nul ^
+ -G"Visual Studio 10"  <nul ^
+ -DLYX_CPACK=ON  <nul ^
+ -DLYX_LOCALVERSIONING=ON  <nul ^
+ -DLYX_INSTALL=ON  <nul ^
+ -DLYX_NLS=ON  <nul ^
+ -DLYX_ASPELL=OFF  <nul ^
+ -DLYX_ENCHANT=OFF  <nul ^
+ -DLYX_HUNSPELL=ON  <nul ^
+ -DLYX_DEVEL_VERSION=OFF  <nul ^
+ -DLYX_RELEASE=ON  <nul ^
+ -DLYX_DEBUG=OFF  <nul ^
+ -DLYX_NO_OPTIMIZE=OFF  <nul ^
+ -DLYX_PACKAGE_SUFFIX=ON  <nul ^
+ -DLYX_PCH=OFF  <nul ^
+ -DLYX_MERGE_FILES=OFF  <nul ^
+ -DLYX_MERGE_REBUILD=OFF  <nul ^
+ -DLYX_QUIET=OFF  <nul ^
+ -DLYX_INSTALL_PREFIX=OFF  <nul ^
+ -DLYX_BUNDLE=OFF  <nul ^
+ -DLYX_CONSOLE=OFF  <nul ^
+ -DLYX_VLD=OFF  <nul ^
+ -DLYX_WALL=ON  <nul ^
+ -DLYX_CONFIGURE_CHECKS=ON  <nul ^
+ -DLYX_DEPENDENCIES_DOWNLOAD=ON  <nul ^
+
