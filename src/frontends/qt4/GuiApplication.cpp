@@ -118,7 +118,7 @@
 #undef None
 #endif
 
-#ifdef Q_WS_WIN
+#if defined(Q_WS_WIN) // || defined(Q_OS_WIN) // QWindowsMime include not found in QT 5.1.0
 #include <QWindowsMime>
 #ifdef Q_CC_GNU
 #include <wtypes.h>
@@ -721,7 +721,7 @@ public:
 ////////////////////////////////////////////////////////////////////////
 // Windows specific stuff goes here...
 
-#ifdef Q_WS_WIN
+#if (defined(Q_WS_WIN) || defined(Q_OS_WIN))
 // QWindowsMimeMetafile can only be compiled on Windows.
 
 static FORMATETC cfFromMime(QString const & mimetype)
@@ -2151,7 +2151,7 @@ void GuiApplication::createView(QString const & geometry_arg, bool autoShow,
 	}
 
 	if (!geometry_arg.isEmpty()) {
-#ifdef Q_WS_WIN
+#if defined(Q_WS_WIN) || defined(Q_OS_WIN)
 		int x, y;
 		int w, h;
 		QRegExp re( "[=]*(?:([0-9]+)[xX]([0-9]+)){0,1}[ ]*(?:([+-][0-9]*)([+-][0-9]*)){0,1}" );

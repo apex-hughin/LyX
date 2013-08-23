@@ -69,3 +69,8 @@
 #include <QtCore>
 #include <QtGui>
 #endif
+
+#if defined(LYX_PCH_QT5) && defined(LYX_BUILD_QT5_FRONTEND)
+#include <QtCore>
+#include <QtWidgets>
+#endif
