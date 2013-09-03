@@ -721,8 +721,8 @@ public:
 ////////////////////////////////////////////////////////////////////////
 // Windows specific stuff goes here...
 
-#if (defined(Q_WS_WIN) || defined(Q_OS_WIN))
-// QWindowsMimeMetafile can only be compiled on Windows.
+#if defined(Q_WS_WIN)
+// QWindowsMimeMetafile can only be compiled on Windows with Qt version <= 0x050000.
 
 static FORMATETC cfFromMime(QString const & mimetype)
 {
@@ -739,7 +739,6 @@ static FORMATETC cfFromMime(QString const & mimetype)
 	formatetc.lindex = -1;
 	return formatetc;
 }
-
 
 class QWindowsMimeMetafile : public QWindowsMime {
 public:
