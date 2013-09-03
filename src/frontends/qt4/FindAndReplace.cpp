@@ -611,7 +611,7 @@ void FindAndReplaceWidget::updateGUI()
 Dialog * createGuiSearchAdv(GuiView & lv)
 {
 	FindAndReplace * gui = new FindAndReplace(lv, Qt::RightDockWidgetArea);
-#ifdef Q_WS_MACX
+#if (defined(Q_OS_MACX) && QT_VERSION > 0x050000) || defined(Q_WS_MACX)
 	// On Mac show and floating
 	gui->setFloating(true);
 #endif

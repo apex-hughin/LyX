@@ -2233,7 +2233,7 @@ bool Menus::searchMenu(FuncRequest const & func,
 void Menus::fillMenuBar(QMenuBar * qmb, GuiView * view, bool initial)
 {
 	if (initial) {
-#ifdef Q_WS_MACX
+#if (defined(Q_OS_MACX) && QT_VERSION > 0x050000) || defined(Q_WS_MACX)
 		// setup special mac specific menu items, but only do this
 		// the first time a QMenuBar is created. Otherwise Qt will
 		// create duplicate items in the application menu. It seems
@@ -2284,6 +2284,7 @@ void Menus::fillMenuBar(QMenuBar * qmb, GuiView * view, bool initial)
 		Menu * menu = new Menu(view, m->submenuname(), true);
 		menu->setTitle(label(*m));
 		qmb->addMenu(menu);
+		updateMenu(menu);
 
 		d->name_map_[view][name] = menu;
 	}

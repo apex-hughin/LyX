@@ -98,7 +98,7 @@ bool GuiToc::getStatus(Cursor & cur, FuncRequest const & cmd,
 Dialog * createGuiToc(GuiView & lv)
 {
 	GuiToc * toc;
-#ifdef Q_WS_MACX
+#if (defined(Q_OS_MACX) && QT_VERSION > 0x050000) || defined(Q_WS_MACX)
 	// On Mac show at the right and floating
 	toc = new GuiToc(lv, Qt::RightDockWidgetArea);
 	toc->setFloating(true);

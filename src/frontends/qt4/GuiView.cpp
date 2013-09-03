@@ -1058,7 +1058,7 @@ void GuiView::on_lastWorkAreaRemoved()
 		return;
 	}
 
-#if (defined(Q_WS_MACX) || defined(Q_OS_MACX))
+#if (defined(Q_OS_MACX) && QT_VERSION > 0x050000) || defined(Q_WS_MACX)
 	// On Mac we also close the last window because the application stay
 	// resident in memory. On other platforms we don't close the last
 	// window because this would quit the application.

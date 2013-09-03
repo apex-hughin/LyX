@@ -267,7 +267,7 @@ GuiFontInfo::GuiFontInfo(FontInfo const & f)
 			QString family = makeFontName(toqstr(lyxrc.roman_font_name),
 				toqstr(lyxrc.roman_font_foundry)); 
 			font.setFamily(family);
-#ifdef Q_WS_MACX
+#if (defined(Q_OS_MACX) && QT_VERSION > 0x050000) || defined(Q_WS_MACX)
 #if QT_VERSION >= 0x040300 //&& QT_VERSION < 0x040800
 			// Workaround for a Qt bug, see http://www.lyx.org/trac/ticket/3684
 			// and http://bugreports.qt.nokia.com/browse/QTBUG-11145.

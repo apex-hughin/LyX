@@ -71,7 +71,7 @@
 #include "support/PathChanger.h"
 #include "support/Systemcall.h"
 
-#ifdef Q_WS_MACX
+#if (defined(Q_OS_MACX) && QT_VERSION > 0x050000) || defined(Q_WS_MACX)
 #include "support/AppleScript.h"
 #include "support/linkback/LinkBackProxy.h"
 #endif
@@ -126,9 +126,9 @@
 #include <objidl.h>
 #endif // Q_WS_WIN
 
-#ifdef Q_WS_MACX
+#if (defined(Q_OS_MACX) && QT_VERSION > 0x050000) || defined(Q_WS_MACX)
 #include <QMacPasteboardMime>
-#endif // Q_WS_MACX
+#endif // Q_OS_MACX
 
 #include "support/bind.h"
 #include <boost/crc.hpp>
@@ -661,7 +661,7 @@ public:
 	}
 };
 
-#ifdef Q_WS_MACX
+#if (defined(Q_OS_MACX) && QT_VERSION > 0x050000) || defined(Q_WS_MACX)
 // QMacPasteboardMimeGraphics can only be compiled on Mac.
 
 class QMacPasteboardMimeGraphics : public QMacPasteboardMime
@@ -930,7 +930,7 @@ struct GuiApplication::Private
 	/// Only used on mac.
 	GlobalMenuBar * global_menubar_;
 
-#ifdef Q_WS_MACX
+#if (defined(Q_OS_MACX) && QT_VERSION > 0x050000) || defined(Q_WS_MACX)
 	/// Linkback mime handler for MacOSX.
 	QMacPasteboardMimeGraphics mac_pasteboard_mime_;
 #endif
@@ -949,7 +949,7 @@ GuiApplication * guiApp;
 
 GuiApplication::~GuiApplication()
 {
-#ifdef Q_WS_MACX
+#if (defined(Q_OS_MACX) && QT_VERSION > 0x050000) || defined(Q_WS_MACX)
 	closeAllLinkBackLinks();
 #endif
 	delete d;
@@ -977,7 +977,7 @@ GuiApplication::GuiApplication(int & argc, char ** argv)
 	if (lyxrc.quit_on_last_window_closed)
 		setQuitOnLastWindowClosed(false);
 	*/
-#ifdef Q_WS_MACX
+#if (defined(Q_OS_MACX) && QT_VERSION > 0x050000) || defined(Q_WS_MACX)
 	// FIXME: Do we need a lyxrc setting for this on Mac? This behaviour
 	// seems to be the default case for applications like LyX.
 	setQuitOnLastWindowClosed(false);
@@ -2279,7 +2279,7 @@ void GuiApplication::execBatchCommands()
 		// Gives some error box here.
 		return;
 
-#ifdef Q_WS_MACX
+#if (defined(Q_OS_MACX) && QT_VERSION > 0x050000) || defined(Q_WS_MACX)
 #if QT_VERSION > 0x040600
 	setAttribute(Qt::AA_MacDontSwapCtrlAndMeta,lyxrc.mac_dontswap_ctrl_meta);
 #endif

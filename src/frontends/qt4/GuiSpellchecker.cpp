@@ -614,7 +614,7 @@ void GuiSpellchecker::updateView()
 Dialog * createGuiSpellchecker(GuiView & lv) 
 { 
 	GuiSpellchecker * gui = new GuiSpellchecker(lv, Qt::RightDockWidgetArea);
-#ifdef Q_WS_MACX
+#if (defined(Q_OS_MACX) && QT_VERSION > 0x050000) || defined(Q_WS_MACX)
 	gui->setFloating(true);
 #endif
 	return gui;

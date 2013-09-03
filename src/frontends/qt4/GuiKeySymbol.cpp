@@ -704,7 +704,7 @@ docstring const KeySymbol::print(KeyModifier mod, bool forgui) const
 	if (forgui)
 		str = seq.toString(QKeySequence::NativeText);
 	else {
-#ifdef Q_WS_MACX
+#if (defined(Q_OS_MACX) && QT_VERSION > 0x050000) || defined(Q_WS_MACX)
 		// Qt/Mac does not use Command and friends in the
 		// portable case, but the windows-like Control+x (bug 5421).
 		str = seq.toString(QKeySequence::NativeText);

@@ -455,7 +455,7 @@ bool CategorizedCombo::eventFilter(QObject * o, QEvent * e)
 
 void CategorizedCombo::setIconSize(QSize size)
 {
-#ifdef Q_WS_MACX
+#if (defined(Q_OS_MACX) && QT_VERSION > 0x050000) || defined(Q_WS_MACX)
 	bool small = size.height() < 20;
 	setAttribute(Qt::WA_MacSmallSize, small);
 	setAttribute(Qt::WA_MacNormalSize, !small);

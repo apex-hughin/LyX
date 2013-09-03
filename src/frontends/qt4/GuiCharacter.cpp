@@ -213,7 +213,7 @@ GuiCharacter::GuiCharacter(GuiView & lv)
 	bc().addReadOnly(toggleallCB);
 	bc().addReadOnly(autoapplyCB);
 
-#ifdef Q_WS_MACX
+#if (defined(Q_OS_MACX) && QT_VERSION > 0x050000) || defined(Q_WS_MACX)
 	// On Mac it's common to have tool windows which are always in the
 	// foreground and are hidden when the main window is not focused.
 	setWindowFlags(Qt::Tool);

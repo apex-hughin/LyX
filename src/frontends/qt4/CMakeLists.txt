@@ -54,7 +54,12 @@ else()
 endif()
 set_target_properties(frontend_qt4 PROPERTIES FOLDER "applications/LyX")
 
-qt_use_modules(frontend_qt4 Core Gui Widgets Concurrent)
+if(APPLE)
+	qt_use_modules(frontend_qt4 Core Gui Widgets Concurrent MacExtras)
+else()
+	qt_use_modules(frontend_qt4 Core Gui Widgets Concurrent)
+endif()
+
 target_link_libraries(frontend_qt4
 	frontends
 	${QT_QTCORE_LIBRARY}

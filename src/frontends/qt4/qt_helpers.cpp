@@ -298,7 +298,7 @@ QStringList texFileList(QString const & filename)
 
 QString const externalLineEnding(docstring const & str)
 {
-#ifdef Q_WS_MACX
+#if (defined(Q_OS_MACX) && QT_VERSION > 0x050000) || defined(Q_WS_MACX)
 	// The MAC clipboard uses \r for lineendings, and we use \n
 	return toqstr(subst(str, '\n', '\r'));
 #elif defined(Q_WS_WIN) || defined(Q_OS_WIN)
