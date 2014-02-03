@@ -47,7 +47,7 @@ class LyXdocParser (object) :
 	def parseTree (self, InactiveMasterBranches = None) :
 		'''
 		A LyX file parser for external material.
-		This parser reterns an xml.etree.ElementTree
+		This parser returns an xml.etree.ElementTree
 
 		This parser does not evaluate LaTeX macros and therefore does not recognize constructs like:
 		1) \graphicspath{}
