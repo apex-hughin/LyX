@@ -486,14 +486,14 @@ void LyXAction::init()
  */
 		{ LFUN_SPACE_INSERT, "space-insert", Noop, Edit },
 /*!
- * \var lyx::FuncCode lyx::LFUN_HYPERLINK_INSERT
+ * \var lyx::FuncCode lyx::LFUN_HREF_INSERT
  * \li Action: Inserts hyperlinks into the document (clickable in pdf output).
  * \li Notion: Hyperlink target can be set via selection + hyperlink-insert function.
  * \li Syntax: href-insert [<TARGET>]
  * \li Origin: CFO-G, 21 Nov 1997
  * \endvar
  */
-		{ LFUN_HYPERLINK_INSERT, "href-insert", Noop, Edit },
+		{ LFUN_HREF_INSERT, "href-insert", Noop, Edit },
 /*!
  * \var lyx::FuncCode lyx::LFUN_SPECIALCHAR_INSERT
  * \li Action: Inserts various characters into the document.
@@ -1190,13 +1190,13 @@ void LyXAction::init()
  */
 		{ LFUN_LINE_END_SELECT, "line-end-select", ReadOnly | SingleParUpdate, Edit },
 /*!
- * \var lyx::FuncCode lyx::LFUN_LINE_DELETE
+ * \var lyx::FuncCode lyx::LFUN_LINE_DELETE_FORWARD
  * \li Action: Deletes the letters to the end of the (screen) line or
                deletes the selection.
  * \li Syntax: line-delete-forward
  * \endvar
  */
-		{ LFUN_LINE_DELETE, "line-delete-forward", Noop, Edit }, // there is no line-delete-backward
+		{ LFUN_LINE_DELETE_FORWARD, "line-delete-forward", Noop, Edit }, // there is no line-delete-backward
 /*!
  * \var lyx::FuncCode lyx::LFUN_COPY
  * \li Action: Copies the current selection to the clipboard.
@@ -1225,7 +1225,7 @@ void LyXAction::init()
  * \li Action: Pastes text from the active clipboard (retains formatting if the
                clipboard contains formatted text). Pastes plain text if plain text is
                on the clipboard, but tries to interpret it in special ways for certain
-               insets, e.g. converting csv data to rows and colums if tha paste happens
+               insets, e.g. converting csv data to rows and columns if the paste happens
                in a tabular inset.
  * \li Notion: Historically, LFUN_CLIPBOARD_PASTE was introduced as a counterpart of
                LFUN_PRIMARY_SELECTION_PASTE: It behaved exactly the same, but the source
@@ -1261,7 +1261,7 @@ void LyXAction::init()
                LyX content is in the clipboard. Pastes plain text if plain text
                is on the clipboard, without trying to interpret it in special
                ways for certain insets, e.g. converting csv data to rows and
-               colums if the paste happens in a tabular inset.
+               columns if the paste happens in a tabular inset.
  * \li Syntax: clipboard-paste-simple [<ARG>]
  * \li Params: <ARG>: "paragraph" will cause pasting as one paragraph, i.e. "Join lines".
  * \endvar
@@ -1345,21 +1345,21 @@ void LyXAction::init()
  */
 		{ LFUN_FONT_UNDERLINE, "font-underline", Noop, Layout },
 /*!
- * \var lyx::FuncCode lyx::LFUN_FONT_UULINE
+ * \var lyx::FuncCode lyx::LFUN_FONT_UNDERUNDERLINE
  * \li Action: Toggles double underline in the font (selection-wise).
  * \li Syntax: font-underunderline
  * \li Origin: sanda, 5 May 2009
  * \endvar
  */
-		{ LFUN_FONT_UULINE, "font-underunderline", Noop, Layout },
+		{ LFUN_FONT_UNDERUNDERLINE, "font-underunderline", Noop, Layout },
 /*!
- * \var lyx::FuncCode lyx::LFUN_FONT_UWAVE
+ * \var lyx::FuncCode lyx::LFUN_FONT_UNDERWAVE
  * \li Action: Toggles wavy underline in the font (selection-wise).
  * \li Syntax: font-underwave
  * \li Origin: sanda, 5 May 2009
  * \endvar
  */
-		{ LFUN_FONT_UWAVE, "font-underwave", Noop, Layout },
+		{ LFUN_FONT_UNDERWAVE, "font-underwave", Noop, Layout },
 /*!
  * \var lyx::FuncCode lyx::LFUN_FONT_STRIKEOUT
  * \li Action: Toggles strikeout (strike-through) in the font (selection-wise).
@@ -2300,7 +2300,7 @@ void LyXAction::init()
 		{ LFUN_CHANGES_TRACK, "changes-track", Noop, Edit },
 /*!
  * \var lyx::FuncCode lyx::LFUN_CHANGES_OUTPUT
- * \li Action: Toggles showing of change tracking in typesetted output.
+ * \li Action: Toggles showing of change tracking in typeset output.
  * \li Syntax: changes-output
  * \li Origin: jspitzm, 21 Jan 2005
  * \endvar
@@ -3385,7 +3385,7 @@ void LyXAction::init()
 /*!
  * \var lyx::FuncCode lyx::LFUN_META_PREFIX
  * \li Action: Simulate halting Meta key (Alt key on PCs).
- * \li Notion: Used for buffer editation not for GUI control.
+ * \li Notion: Used for buffer edition not for GUI control.
  * \li Syntax: meta-prefix
  * \endvar
  */
@@ -3533,13 +3533,13 @@ void LyXAction::init()
  */
 		{ LFUN_COMPLETION_POPUP, "completion-popup", ReadOnly | NoUpdate, Edit },
 /*!
- * \var lyx::FuncCode lyx::LFUN_COMPLETION_COMPLETE
+ * \var lyx::FuncCode lyx::LFUN_COMPLETE
  * \li Action: Try to complete the word or command at the cursor position.
  * \li Syntax: complete
  * \li Origin: sts, Feb 19 2008
  * \endvar
  */
-		{ LFUN_COMPLETION_COMPLETE, "complete", SingleParUpdate, Edit },
+		{ LFUN_COMPLETE, "complete", SingleParUpdate, Edit },
 
 /*!
  * \var lyx::FuncCode lyx::LFUN_COMPLETION_CANCEL
@@ -3643,17 +3643,17 @@ void LyXAction::init()
  * \li Origin: sts, 16 Nov 2008
  * \endvar
  */
-		{ LFUN_LABEL_COPY_AS_REF, "copy-label-as-reference",
+		{ LFUN_LABEL_COPY_AS_REFERENCE, "label-copy-as-reference",
 			ReadOnly | NoUpdate | AtPoint, Edit },
 
 /*!
- * \var lyx::FuncCode lyx::LFUN_LABEL_INSERT_AS_REF
+ * \var lyx::FuncCode lyx::LFUN_LABEL_INSERT_AS_REFERENCE
  * \li Action: Inserts the label (in ToC pane) as a cross-reference at the position of the cursor.
  * \li Syntax: label-insert-as-reference
  * \li Origin: vfr, 7 Apr 2009
  * \endvar
  */
-		{ LFUN_LABEL_INSERT_AS_REF, "label-insert-as-reference", Noop, Edit},
+		{ LFUN_LABEL_INSERT_AS_REFERENCE, "label-insert-as-reference", Noop, Edit},
 
 /*!
  * \var lyx::FuncCode lyx::LFUN_BUFFER_ZOOM_IN
