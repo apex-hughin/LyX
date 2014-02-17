@@ -100,11 +100,6 @@
 % example macro from sec. 19.4
 %\def\tagform@#1{\maketag@@@{|#1|}}
 
-% macro from sec. 10.2
-\def\clap#1{\hbox to 0pt{\hss #1\hss}}
-\def\mathclap {\mathpalette \mathclapinternal}
-\def\mathclapinternal #1#2{\clap{$\mathsurround =0pt #1{#2}$}}
-
 
 % ------------------------------------
 % used to check for needed LaTeX packages
@@ -226,7 +221,7 @@ End
 \use_package cancel 0
 \use_package esint 1
 \use_package mathdots 1
-\use_package mathtools 0
+\use_package mathtools 1
 \use_package mhchem 1
 \use_package stackrel 0
 \use_package stmaryrd 0
@@ -557,10 +552,9 @@ arg   "math-mode"
 \end_inset
 
 のうちのいずれか、あるいはツールバーボタン
-\begin_inset Graphics
-	filename ../../images/math-mode.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-mode"
 \end_inset
 
 を使用してください。
@@ -704,10 +698,9 @@ T@TeXモード
 \end_inset
 
 は、ツールバーボタン
-\begin_inset Graphics
-	filename ../../images/ert-insert.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "ert-insert"
 \end_inset
 
 を押すか、
@@ -1487,17 +1480,15 @@ status collapsed
 
 \begin_layout Standard
 添字は、アンダースコア「_」を打鍵するか、数式ツールバーボタン
-\begin_inset Graphics
-	filename ../../images/math-subscript.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-subscript"
 \end_inset
 
 を使って入力することができ、指数は、キャレット「^」を打鍵するか、数式ツールバーボタン
-\begin_inset Graphics
-	filename ../../images/math-superscript.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-superscript"
 \end_inset
 
 を使って入力することができます。
@@ -1686,17 +1677,15 @@ frac
 \end_inset
 
 か数式ツールバーボタン
-\begin_inset Graphics
-	filename ../../images/math/frac.png
-	scale 50
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\frac"
 \end_inset
 
 で作ることができます。フォント寸法は、分数が行内数式にあるか別行立て数式にあるかに応じて、自動的に調整されます。数式ツールバーボタン
-\begin_inset Graphics
-	filename ../../images/math/frac-square.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\frac-square"
 \end_inset
 
 を使えば、分数の種類を選ぶことができます。
@@ -2332,10 +2321,9 @@ sqrt
 \end_inset
 
 か数式ツールバーボタン
-\begin_inset Graphics
-	filename ../../images/math/sqrt.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\sqrt"
 \end_inset
 
 で作成することができ、他のすべての根号は、コマンド
@@ -2357,10 +2345,9 @@ root
 \end_inset
 
 か数式ツールバーボタン
-\begin_inset Graphics
-	filename ../../images/math/root.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\root"
 \end_inset
 
 で作成することができます。
@@ -2635,10 +2622,9 @@ binom
 \end_inset
 
 か数式ツールバーボタン
-\begin_inset Graphics
-	filename ../../images/math/frac-square.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\frac-square"
 \end_inset
 
 の小メニューを使って挿入することができます。分数(
@@ -3087,10 +3073,9 @@ B & \textrm{for }x=0
 cases
 \series default
 を挿入するか数式ツールバーボタン
-\begin_inset Graphics
-	filename ../../images/math/cases.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\cases"
 \end_inset
 
 を使用した後では、
@@ -3120,10 +3105,9 @@ arg   "newline-insert newline"
 \end_inset
 
 か表ツールバーボタン
-\begin_inset Graphics
-	filename ../../images/tabular-feature_append-row.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "inset-modify tabular append-row"
 \end_inset
 
 を使えば、新しい行を作ることができます。
@@ -3529,10 +3513,9 @@ status collapsed
 
 \begin_layout Plain Layout
 ツールバーボタン
-\begin_inset Graphics
-	filename ../../images/math/space.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\space"
 \end_inset
 
 の小メニューに入っています。
@@ -4272,10 +4255,9 @@ status collapsed
 
 \begin_layout Plain Layout
 数式ツールバー中の
-\begin_inset Graphics
-	filename ../../images/math/ldots.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\ldots"
 \end_inset
 
 ボタンで表示されている小メニューです。
@@ -4842,10 +4824,9 @@ status collapsed
 
 \begin_layout Standard
 行列は、数式ツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/dialog-show_mathmatrix.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "dialog-show mathmatrix"
 \end_inset
 
 か
@@ -4959,17 +4940,15 @@ C & F & 10000
 
 \begin_layout Standard
 つづいて行や列を追加したり削除したりするには、数式ツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/tabular-feature_append-row.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "inset-modify tabular append-row"
 \end_inset
 
 や
-\begin_inset Graphics
-	filename ../../images/tabular-feature_delete-row.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "inset-modify tabular delete-row"
 \end_inset
 
 などや
@@ -6661,10 +6640,9 @@ right
 \end_inset
 
 コマンド、あるいは数式ツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/dialog-show_mathdelimiter.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "dialog-show mathdelimiter"
 \end_inset
 
 で挿入することができます。
@@ -7459,10 +7437,9 @@ status collapsed
 
 \begin_layout Standard
 矢印は、数式ツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/math/leftarrow.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\leftarrow"
 \end_inset
 
 か、以下の各小節に列挙してあるコマンドで挿入することができます。
@@ -8818,10 +8795,9 @@ status collapsed
 
 \begin_layout Standard
 アクセントは、数式ツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/math/hat.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\hat"
 \end_inset
 
 か、以下の各小節に列挙してあるコマンドで入力することができます。
@@ -10267,10 +10243,9 @@ arg   "space-insert protected"
 Space
 \family default
 を何回か押すことによって、8種の異なる長さの空白のうち一つを選択することができます。空白は、数式ツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/math/space.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\space"
 \end_inset
 
 を押すか、特定のコマンドを入力することで、挿入することができます。挿入したコマンド如何に関わらず、直後に
@@ -10284,17 +10259,13 @@ Space
 \noindent
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="7">
+<lyxtabular version="3" rows="6" columns="3">
 <features rotate="0" tabularvalignment="middle">
-<column alignment="center" valignment="middle" width="6.8cm">
 <column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="15col%">
 <column alignment="center" valignment="top">
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10303,6 +10274,30 @@ Space
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+保護された空白を挿入したのち、
+\family sans
+Space
+\family default
+を叩く回数
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+出力
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -10318,6 +10313,29 @@ Space
 \begin_inset Text
 
 \begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\, B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 
 \backslash
 :
@@ -10325,6 +10343,29 @@ Space
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\: B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -10340,20 +10381,7 @@ Space
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\backslash
-quad
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\backslash
-qquad
+2
 \end_layout
 
 \end_inset
@@ -10362,9 +10390,10 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $A\; B$
+\end_inset
 
-\backslash
-!
+
 \end_layout
 
 \end_inset
@@ -10375,38 +10404,9 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-保護された空白を挿入したのち、
-\family sans
-Space
-\family default
-を叩く回数
-\end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2
+\backslash
+quad
 \end_layout
 
 \end_inset
@@ -10420,72 +10420,7 @@ Space
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-4
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-出力
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $A\, B$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $A\: B$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $A\; B$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10497,7 +10432,29 @@ Space
 
 \end_inset
 </cell>
+</row>
+<row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10505,6 +10462,216 @@ Space
 \end_inset
 
 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="15col%">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+コマンド
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+保護された空白を挿入したのち、
+\family sans
+Space
+\family default
+を叩く回数
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+出力
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+hfill
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\hfill B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+hspace*{1em}
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\hspace*{1em}B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+hspace{1em}
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\hspace{1em}B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+
+\begin_inset space \textvisiblespace{}
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\ B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+!
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
 \end_layout
 
 \end_inset
@@ -10530,7 +10697,30 @@ Space
 \end_layout
 
 \begin_layout Standard
-一番右の長さは、一見、空白を生まないように見えます。実はこれは負の長さなので、他の長さと異なり、LyX中では赤で表示されます。以下のように、他にもう二つ、負の長
+
+\lang english
+Space
+\begin_inset space ~
+\end_inset
+
+5
+\begin_inset space \thinspace{}
+\end_inset
+
+--
+\begin_inset space \thinspace{}
+\end_inset
+
+7 are variable spaces which are explained in
+\lang japanese
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:可変長の空白"
+
+\end_inset
+
+.一番右の長さは、一見、空白を生まないように見えます。実はこれは負の長さなので、他の長さと異なり、LyX中では赤で表示されます。以下のように、他にもう二つ、負の長
 さの空白があります。
 \end_layout
 
@@ -10593,7 +10783,7 @@ Space
 \begin_inset Text
 
 \begin_layout Plain Layout
-6
+10
 \end_layout
 
 \end_inset
@@ -10602,7 +10792,7 @@ Space
 \begin_inset Text
 
 \begin_layout Plain Layout
-7
+11
 \end_layout
 
 \end_inset
@@ -10769,6 +10959,15 @@ f_kl
 \end_layout
 
 \begin_layout Standard
+\noindent
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
 イコール記号などの関係子は、つねに空白を前後に伴うようになっていますが、これを抑制するには、イコール記号をTeX括弧で囲みます。以下の例にこれを示します。
 \end_layout
 
@@ -11092,7 +11291,48 @@ hspace
 
 
 \color inherit
-」を左クリックすることによって指定することができます。長さは負の値でも構いません。数式が使用できる空白をすべて使い尽くすだけの空白を挿入するには、
+」を左クリックすることによって指定することができます。長さは負の値でも構いません。
+\lang english
+When a space would be the first character in a line it would be omitted.
+ To force its output use the command 
+\series bold
+
+\backslash
+hspace*
+\series default
+ instead of 
+\series bold
+
+\backslash
+hspace
+\series default
+ or left-click on the 
+\begin_inset Quotes eld
+\end_inset
+
+
+\color blue
+
+\begin_inset space \textvisiblespace{}
+\end_inset
+
+
+\color inherit
+
+\begin_inset Quotes erd
+\end_inset
+
+ and check the option 
+\family sans
+Protect
+\family default
+.
+\lang japanese
+
+\begin_inset Newline newline
+\end_inset
+
+数式が使用できる空白をすべて使い尽くすだけの空白を挿入するには、
 \series bold
 
 \backslash
@@ -11160,10 +11400,6 @@ hspace
 \begin_inset space \textvisiblespace{}
 \end_inset
 
-
-\begin_inset Formula $\to$
-\end_inset
-
 A
 \backslash
 not=C (3
@@ -11197,10 +11433,6 @@ A
 \backslash
 hspace
 \begin_inset space \textvisiblespace{}
-\end_inset
-
-
-\begin_inset Formula $\to$
 \end_inset
 
 A
@@ -12803,10 +13035,9 @@ colorbox
 文字様式
 \family default
 ダイアログで欲しい色を選択します。このダイアログは、ツールバーボタン
-\begin_inset Graphics
-	filename ../../images/dialog-show_character.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "dialog-show character"
 \end_inset
 
 か
@@ -13267,10 +13498,9 @@ status collapsed
 ボックス
 \family default
 メニューかツールバーボタン
-\begin_inset Graphics
-	filename ../../images/box-insert.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "box-insert"
 \end_inset
 
 で作成することができます。
@@ -14382,10 +14612,9 @@ biguplus
 
 \begin_layout Standard
 すべての大演算子は、数式ツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/math/intop.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\intop"
 \end_inset
 
 でも挿入することができます。
@@ -15145,59 +15374,10 @@ reference "eq:substack"
 \end_inset
 
 式のように、演算子の横の余白が大きくなりすぎることがあります。
-\end_layout
-
-\begin_layout Standard
-これを避けるには、LaTeXプリアンブルに以下のようなマクロを指定する方法があります。
-\end_layout
-
-\begin_layout Standard
-
+\lang english
+To avoid this the command 
 \series bold
-
-\backslash
-def
-\backslash
-clap#1{
-\backslash
-hbox to 0pt{
-\backslash
-hss #1
-\backslash
-hss}}
-\begin_inset Newline newline
-\end_inset
-
-
-\backslash
-def
-\backslash
-mathclap {
-\backslash
-mathpalette 
-\backslash
-mathclapinternal}
-\begin_inset Newline newline
-\end_inset
-
-
-\backslash
-def
-\backslash
-mathclapinternal #1#2{
-\backslash
-clap{$
-\backslash
-mathsurround =0pt #1{#2}$}}
-\end_layout
-
-\begin_layout Standard
-これは、範囲の幅を0
-\begin_inset space \thinspace{}
-\end_inset
-
-ptに設定する
-\series bold
+\lang japanese
 
 \backslash
 mathclap
@@ -15214,22 +15394,19 @@ mathclap
 
 \end_inset
 
-コマンドを定義しています。このコマンドの書式は、
-\end_layout
 
-\begin_layout Standard
+\lang english
+ can be used.
+ It sets the width of its content to 0
+\begin_inset space \thinspace{}
+\end_inset
 
-\series bold
+pt.
+\begin_inset Newline newline
+\end_inset
 
-\backslash
-mathclap{範囲}
-\end_layout
 
-\begin_layout Standard
-となっていて、「範囲」には複数の条件を入れることができます。
-\end_layout
-
-\begin_layout Standard
+\lang japanese
 これを
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -15247,7 +15424,7 @@ reference "eq:substack"
 \backslash
 sum_
 \backslash
-mathclap{
+mathclap
 \backslash
 substack
 \begin_inset space \textvisiblespace{}
@@ -15284,6 +15461,99 @@ k\,\in\,\mathbb{N}
 \begin_inset VSpace bigskip
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+When several consecutive operators have limits the typesetting of the limits
+ looks often imperfect in the output, see this example:
+\lang japanese
+
+\begin_inset Formula 
+\[
+\text{a)}\lim_{n\to\infty}\max_{p\ge n}\quad\text{b)}\lim_{n\to\infty}\max_{p^{2}\ge n}\quad\text{c)}\lim_{n\to\infty}\sup_{p^{2}\ge nK}\quad\text{d)}\limsup_{n\to\infty}\max_{p\ge n}
+\]
+
+\end_inset
+
+
+\lang english
+To improve the typesetting set in the document settings under 
+\family sans
+Math
+\begin_inset space ~
+\end_inset
+
+Options
+\family default
+ for the package
+\lang japanese
+ 
+\series bold
+mathtools
+\series default
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+ぱっけーじ@パッケージ ! mathtools
+\end_layout
+
+\end_inset
+
+ 
+\lang english
+the option 
+\family sans
+Load
+\begin_inset space ~
+\end_inset
+
+always
+\family default
+.
+ Then insert into your formula the command 
+\series bold
+\lang japanese
+
+\backslash
+adjustlimits
+\series default
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+こまんど@コマンド ! A ! 
+\backslash
+adjustlimits
+\end_layout
+
+\end_inset
+
+ 
+\lang english
+directly before the first operator.
+ The example will then look like this:
+\lang japanese
+
+\begin_inset Formula 
+\[
+\text{a)}\adjustlimits\lim_{n\to\infty}\max_{p\ge n}\quad\text{b)}\adjustlimits\lim_{n\to\infty}\max_{p^{2}\ge n}\quad\text{c)}\adjustlimits\lim_{n\to\infty}\sup_{p^{2}\ge nK}\quad\text{d)}\adjustlimits\limsup_{n\to\infty}\max_{p\ge n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
 一つの範囲を複数の演算子に用いる方法が、第
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -15297,7 +15567,7 @@ reference "sub:自己定義演算子"
 \begin_layout Subsection
 演算子の修飾
 \begin_inset Index idx
-status open
+status collapsed
 
 \begin_layout Plain Layout
 えんざんし@演算子 ! 
@@ -15366,31 +15636,74 @@ sideset
 
 \end_inset
 
-コマンドを使うと、文字を演算子の前や後ろに付けることができます。コマンド書式は、
+コマンドを使うと、文字を演算子の前や後ろに付けることができます。
 \end_layout
 
 \begin_layout Standard
 
-\series bold
+\lang english
+There are 4
+\begin_inset space ~
+\end_inset
 
-\backslash
-sideset{前置文字}{後置文字}
-\end_layout
-
-\begin_layout Standard
-
+variants of 
 \series bold
 
 \backslash
 sideset
 \series default
-は、かならずアクセントを付ける演算子の前に置かなくてはなりません。複数の文字や他の演算子、記号もアクセントとして使用することができます。たとえば、
+:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\lang english
+
+\backslash
+sideset
+\series default
+ is used to set characters at the corners of the operator
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\lang english
+
+\backslash
+sidesetn
+\series default
+ is used to set characters before and/or behind the operator (this variant
+ represents LaTeX's original 
 \series bold
 
 \backslash
 sideset
 \series default
-を使って演算子の後だけに文字を配置したい場合には、最初の括弧の中には何も書かないようにしますが、括弧を省略することはできません。
+ command)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\lang english
+
+\backslash
+sidesetl
+\series default
+ is used to set characters at the left corners and/or behind the operator
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\lang english
+
+\backslash
+sidesetr
+\series default
+ is used to set characters at the right corners and/or before the operator
 \end_layout
 
 \begin_layout Standard
@@ -15398,23 +15711,25 @@ sideset
 \series bold
 
 \backslash
-sideset{
-\begin_inset Formula $\to$
+sidesetn
+\begin_inset space \textvisiblespace{}
 \end_inset
 
 
 \backslash
-{
-\series default
+sum
+\begin_inset space \textvisiblespace{}
+\end_inset
+
+
+\begin_inset Formula $\to$
+\end_inset
+
 '
-\series bold
-
 \begin_inset Formula $\to$
 \end_inset
 
-
-\backslash
-sum_k=1
+_k=1
 \begin_inset space \textvisiblespace{}
 \end_inset
 
@@ -16575,10 +16890,9 @@ triangleright
 
 \begin_layout Standard
 二項演算子は、すべて数式ツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/math/pm.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\pm"
 \end_inset
 
 から挿入することもできます。
@@ -17630,10 +17944,9 @@ target "http://www.lyx.org/trac/ticket/4629"
 文字様式
 \family default
 ダイアログや、
-\begin_inset Graphics
-	filename ../../images/math/font.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\font"
 \end_inset
 
 を使用することもできます。
@@ -18031,7 +18344,17 @@ normalsize
 \end_layout
 
 \begin_layout Standard
-数式内では、以下の寸法コマンドを使用して、寸法を変更することができます。
+数式内では、以下の寸法コマンドを使用して、寸法を変更することができます
+\lang english
+or the toolbar button
+\lang japanese
+ 
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\style"
+\end_inset
+
+。
 \end_layout
 
 \begin_layout Standard
@@ -18363,10 +18686,9 @@ status collapsed
 
 \begin_layout Standard
 すべてのギリシャ文字は、ツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/math/alpha.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\alpha"
 \end_inset
 
 からでも挿入することができます。各国の組版規則では、数式内のギリシャ文字はどれもイタリック体か斜体で組版されなくてはならないことになっていますが、フランス語やロ
@@ -19989,17 +20311,15 @@ status collapsed
 
 \begin_layout Standard
 本節に掲げてある各記号の多くは、ツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/math/nabla.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\nabla"
 \end_inset
 
 や
-\begin_inset Graphics
-	filename ../../images/math/digamma.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\digamma"
 \end_inset
 
 でも挿入することができます。
@@ -22132,10 +22452,9 @@ status collapsed
 
 \begin_layout Standard
 関係子はすべて、ツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/math/leq.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\leq"
 \end_inset
 
 でも挿入することができます。
@@ -23500,6 +23819,25 @@ triangleright
 \end_layout
 
 \begin_layout Standard
+
+\lang english
+LyX supports also many special relations.
+ Use the toolbar button
+\lang japanese
+ 
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\leqq"
+\end_inset
+
+ 
+\lang english
+to see a list of these relations
+\lang japanese
+。
+\end_layout
+
+\begin_layout Standard
 関係子は、記号とは違って、つねに前後に余白が置かれます。
 \end_layout
 
@@ -24203,10 +24541,9 @@ gcd
 
 \begin_layout Standard
 上記は、数式ツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/math/functions.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\functions"
 \end_inset
 
 でも挿入することができます。
@@ -24731,6 +25068,28 @@ x=B
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+How to adjust the typesetting of the limits see 
+\lang japanese
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:演算子の範囲"
+
+\end_inset
+
+。
 \end_layout
 
 \begin_layout Subsection
@@ -25327,10 +25686,9 @@ j
 \end_inset
 
 の各文字は、数式ツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/math/digamma.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\digamma"
 \end_inset
 
 からも挿入することができます。
@@ -26776,15 +27134,11 @@ status collapsed
 
 \begin_layout Standard
 LyXでは、多行数式は、数式中で
-\series bold
-
 \begin_inset Info
 type  "shortcut"
 arg   "newline-insert newline"
 \end_inset
 
-
-\series default
 を押すことで作られます。この操作によって、第
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -26831,17 +27185,15 @@ arg   "newline-insert newline"
 \end_inset
 
 を押すことによって作られます。行を足したり削ったりするには、数式ツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/tabular-feature_append-row.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "inset-modify tabular append-row"
 \end_inset
 
 や
-\begin_inset Graphics
-	filename ../../images/tabular-feature_delete-row.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "inset-modify tabular delete-row"
 \end_inset
 
 を使うか、
@@ -27682,17 +28034,15 @@ align環境は、
 
 \begin_layout Standard
 列を追加したり削除したりするには、数式ツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/tabular-feature_append-column.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "inset-modify tabular append-column"
 \end_inset
 
 や
-\begin_inset Graphics
-	filename ../../images/tabular-feature_delete-column.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "inset-modify tabular delete-column"
 \end_inset
 
 を使うか、
@@ -28605,10 +28955,9 @@ status collapsed
 ラベル
 \family default
 メニューか、ツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/label-insert.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "label-insert"
 \end_inset
 
 で付けることができます。このとき、カーソルは別行立て数式の中になくてはなりません。すると、テキストフィールドの中に
@@ -28635,10 +28984,9 @@ LyX中でラベル名は、数式の後ろに、二つの括弧に囲まれて�
 相互参照
 \family default
 メニューかツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/dialog-show-new-inset_ref.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "dialog-show-new-inset ref"
 \end_inset
 
 を使って挿入します。数式相互参照は、出力では数式番号として表示されます。相互参照ダイアログで「
@@ -31915,10 +32263,9 @@ newcommand
 マクロ
 \family default
 メニューか、ツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/math-macro_newmacroname_newcommand.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro newmacroname_newcommand"
 \end_inset
 
 で作ることができます。すると、数式マクロツールバーが表示されるとともに、マクロを定義した箇所に以下のようなボックスが現れます。
@@ -31931,7 +32278,7 @@ newcommand
 
 
 \begin_inset Graphics
-	filename clipart/macrobox.png
+	filename ../clipart/macrobox.png
 
 \end_inset
 
@@ -31963,24 +32310,21 @@ newmacronameが既定のマクロ名として現れますが、意味のある�
 #引数番号
 \series default
 というコマンドで入力するか、マクロツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/math-macro-add-param.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-add-param"
 \end_inset
 
 を使用します。引数位置は赤で表示されます。引数は、最大で9つまでとることができます。非必須引数は、ツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/math-macro-add-optional-param.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-add-optional-param"
 \end_inset
 
 で作ることができます。最初の必須引数は、ツールバーボタンの
-\begin_inset Graphics
-	filename ../../images/math-macro-make-optional.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-make-optional"
 \end_inset
 
 を使って、非必須引数にすることができます。二つ目の青枠には、LyX中でのマクロの表示のしかたを定義することができます。通常は、定義したとおりに表示された方が便利
@@ -32250,10 +32594,9 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../images/math-macro-remove-param.png
-	rotateOrigin center
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-remove-param"
 \end_inset
 
 
@@ -32281,10 +32624,9 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../images/math-macro-add-param.png
-	rotateOrigin center
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-add-param"
 \end_inset
 
 
@@ -32312,10 +32654,9 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../images/math-macro-make-optional.png
-	rotateOrigin center
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-make-optional"
 \end_inset
 
 
@@ -32362,10 +32703,9 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../images/math-macro-make-nonoptional.png
-	rotateOrigin center
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-make-nonoptional"
 \end_inset
 
 
@@ -32412,10 +32752,9 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../images/math-macro-remove-optional-param.png
-	rotateOrigin center
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-remove-optional-param"
 \end_inset
 
 
@@ -32443,10 +32782,9 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../images/math-macro-add-optional-param.png
-	rotateOrigin center
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-add-optional-param"
 \end_inset
 
 
@@ -32474,10 +32812,9 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../images/math-macro-remove-greedy-param.png
-	rotateOrigin center
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-remove-greedy-param"
 \end_inset
 
 
@@ -32524,10 +32861,9 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../images/math-macro-append-greedy-param.png
-	rotateOrigin center
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-append-greedy-param"
 \end_inset
 
 
@@ -32574,10 +32910,9 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../images/math-macro-add-greedy-optional-param.png
-	rotateOrigin center
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-add-greedy-optional-param"
 \end_inset
 
 

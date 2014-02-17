@@ -45,6 +45,11 @@
 % change header rule width
 \renewcommand{\headrulewidth}{2pt}
 
+% um mehr Raum in Tabellenzeilen zu haben
+\@ifundefined{extrarowheight}
+ {\usepackage{array}}{}
+\setlength{\extrarowheight}{2pt}
+
 %für deutsche Nomenlatur
 \renewcommand{\eqdeclaration}[1]{, siehe Gleichung\nobreakspace(#1)}
 \renewcommand{\pagedeclaration}[1]{, Seite\nobreakspace{}#1}
@@ -5429,11 +5434,7 @@ Standard
 \end_layout
 
 \begin_layout Subsubsection
-
-\family sans
 Zitat (kurz)
-\family default
-
 \begin_inset Index idx
 status collapsed
 
@@ -5443,11 +5444,7 @@ Zitat!(kurz)
 
 \end_inset
 
- und 
-\family sans
-Zitat (lang)
-\family default
-
+ und Zitat (lang)
 \begin_inset Index idx
 status collapsed
 
@@ -5618,9 +5615,17 @@ Zitat
 \end_layout
 
 \begin_layout Subsubsection
-
-\family sans
 Gedicht
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Absatz ! Gedicht
+\end_layout
+
+\end_inset
+
+
 \begin_inset Index idx
 status collapsed
 
@@ -5813,13 +5818,7 @@ ff lesen.
 \end_layout
 
 \begin_layout Subsubsection
-
-\family sans
-Auf
-\family default
-\SpecialChar \textcompwordmark{}
-
-\family sans
+Auf\SpecialChar \textcompwordmark{}
 listung
 \begin_inset Index idx
 status collapsed
@@ -5830,8 +5829,6 @@ Liste ! Auflistung
 
 \end_inset
 
-
-\family default
 
 \begin_inset CommandInset label
 LatexCommand label
@@ -6052,8 +6049,6 @@ ff ausführlich beschreiben.
 \end_layout
 
 \begin_layout Subsubsection
-
-\family sans
 Aufzählung
 \begin_inset Index idx
 status collapsed
@@ -6064,8 +6059,6 @@ Liste ! Aufzahlung@Aufzählung
 
 \end_inset
 
-
-\family default
 
 \begin_inset CommandInset label
 LatexCommand label
@@ -6272,8 +6265,6 @@ ff lesen, um mehr darüber zu erfahren.
 \end_layout
 
 \begin_layout Subsubsection
-
-\family sans
 Beschreibung
 \begin_inset Index idx
 status collapsed
@@ -6284,8 +6275,6 @@ Liste ! Beschreibung
 
 \end_inset
 
-
-\family default
 
 \begin_inset CommandInset label
 LatexCommand label
@@ -7575,39 +7564,11 @@ Briefe
 \end_layout
 
 \begin_layout Subsubsection
-
-\family sans
-Adresse
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Adresse
-\end_layout
-
-\end_inset
-
-
-\family default
- und 
-\family sans
-Adress
-\family default
-e
+Adresse und Adresse
 \begin_inset space ~
 \end_inset
 
-rechts
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Adresse!rechte
-\end_layout
-
-\end_inset
-
-: Ein Überblick
+rechts: Ein Überblick
 \end_layout
 
 \begin_layout Standard
@@ -7909,8 +7870,6 @@ Die meisten wissenschaftlichen Texte beginnen mit einer kurzen Zusammenfassung
 \end_layout
 
 \begin_layout Subsubsection
-
-\family sans
 Zusammenfassung
 \begin_inset Index idx
 status collapsed
@@ -8015,8 +7974,63 @@ Zusammenfassung
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename clipart/Zusammenfassung.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Absatz-in-der"
+
+\end_inset
+
+Absatz in der 
+\family sans
+Zusammenfassung
+\family default
+-Umgebung.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Wir würden Ihnen gern ein Beispiel zeigen, aber das geht nicht, weil dieses
  Dokument eine Buch-Klasse benutzt.
+ Wir haben es daher als Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Absatz-in-der"
+
+\end_inset
+
+ eingefügt.
  Wenn Sie noch nie von einer Zusammenfassung gehört haben, können Sie diese
  Umgebung ruhig ignorieren.
 \end_layout
@@ -8268,7 +8282,7 @@ yX-Code
 status collapsed
 
 \begin_layout Plain Layout
-Ly
+Absatz ! Ly
 \begin_inset ERT
 status collapsed
 
@@ -8368,6 +8382,10 @@ LyX-Code
 Diese Umgebung hat ein paar Marotten:
 \end_layout
 
+\begin_layout Standard
+a
+\end_layout
+
 \begin_layout Itemize
 Am Anfang eines neuen Absatzes kann man 
 \family sans
@@ -8382,6 +8400,22 @@ Eingabe
 Strg+Eingabe
 \family default
  folgen).
+\end_layout
+
+\begin_layout Itemize
+Auf 
+\family sans
+Strg+Eingabe
+\family default
+ kann keine 
+\family sans
+Leertaste
+\family default
+ folgen, aber 
+\family sans
+Strg+Leertaste
+\family default
+.
 \end_layout
 
 \begin_layout Itemize
@@ -11147,7 +11181,7 @@ Negatives
 \begin_inset space ~
 \end_inset
 
-Halbes
+halbes
 \begin_inset space ~
 \end_inset
 
@@ -11164,6 +11198,54 @@ Leerzeichen Eine Zeile mit einem
 \end_inset
 
  Negatives, halbes Leerzeichen zwischen den Pfeilen.
+\end_layout
+
+\begin_layout Description
+Negatives
+\begin_inset space ~
+\end_inset
+
+medium
+\begin_inset space ~
+\end_inset
+
+Leerzeichen Eine Zeile mit einem 
+\begin_inset Formula $\to$
+\end_inset
+
+
+\begin_inset space \negmedspace{}
+\end_inset
+
+
+\begin_inset Formula $\gets$
+\end_inset
+
+ Negatives, medium Leerzeichen zwischen den Pfeilen.
+\end_layout
+
+\begin_layout Description
+Negatives
+\begin_inset space ~
+\end_inset
+
+dickes
+\begin_inset space ~
+\end_inset
+
+Leerzeichen Eine Zeile mit einem 
+\begin_inset Formula $\to$
+\end_inset
+
+
+\begin_inset space \negthickspace{}
+\end_inset
+
+
+\begin_inset Formula $\gets$
+\end_inset
+
+ Negatives, dickes Leerzeichen zwischen den Pfeilen.
 \end_layout
 
 \begin_layout Description
@@ -11263,7 +11345,7 @@ em) zwischen den Pfeilen.
 \end_layout
 
 \begin_layout Description
-Benutzerdefiniert Eine Zeile mit
+Benutzerdefiniert Eine Zeile mit 
 \begin_inset Formula $\to$
 \end_inset
 
@@ -11326,7 +11408,7 @@ Breite der verschiedenen horizontalen Lerräume.
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="8" columns="2">
+<lyxtabular version="3" rows="10" columns="2">
 <features rotate="0" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -11427,16 +11509,16 @@ em
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Negativ Halb
+Negativ halb
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11445,6 +11527,62 @@ Negativ Halb
 \end_inset
 
 em
+\begin_inset Formula $\thinspace=\thinspace$
+\end_inset
+
+-3
+\begin_inset space \thinspace{}
+\end_inset
+
+mu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Negativ medium
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-4
+\begin_inset space \thinspace{}
+\end_inset
+
+mu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Negativ dick
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-5
+\begin_inset space \thinspace{}
+\end_inset
+
+mu
 \end_layout
 
 \end_inset
@@ -11551,6 +11689,16 @@ Variabler horizontaler Abstand
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:Variabler-horiz-Abstand"
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Leerraum ! variabler horizontaler
+\end_layout
 
 \end_inset
 
@@ -23805,15 +23953,11 @@ Strg+Leertaste
 Mathe
 \family default
  Werkzeugleistenknopf 
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "math-insert \\space"
 \end_inset
 
-
-\family default
 .
  Dies erzeugt einen kleinen Leerraum mit einer Marke zur Visualisierung.
  Zum Beispiel erscheint die Sequenz 
@@ -23906,15 +24050,11 @@ Die Funktionen wie
 \end_inset
 
 kann man entweder mit dem Werkzeugleistenknopf 
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "math-insert \\functions"
 \end_inset
 
-
-\family default
  oder mit Befehlen wie 
 \series bold
 
@@ -24648,15 +24788,11 @@ Array-Umgebung
 Mathe-Werkzeugleiste
 \family default
  den Knopf 
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "dialog-show mathmatrix"
 \end_inset
 
-
-\family default
  an, der das Menü 
 \family sans
 Mathe-Matrix
@@ -25221,15 +25357,11 @@ Schriftstile
 
 \begin_layout Standard
 Sie können verschiedene Schriftstile benutzen, die Sie über den Knopf 
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "math-insert \\font"
 \end_inset
 
-
-\family default
  auf der 
 \family sans
 Mathe-Werkzeugleiste
@@ -25691,47 +25823,29 @@ Die verschiedenen Schriftstile sind hilfreich, um Variablennamen in einem
  bestimmten Zeichensatz einzugeben, aber sicherlich nicht, um damit normalen
  Text zu schreiben.
  Verwenden Sie deshalb zum Schreiben von längeren Textstücken den mathematischen
- Textmodus, den Sie durch 
+ Textmodus, den Sie über den Eintrag 
 \family sans
-Alt+M
+Normaler
 \begin_inset space ~
 \end_inset
 
-M
+Textmodus
 \family default
- aktivieren, wenn Sie sich bereits im Mathematikmodus befinden.
- Der mathematische Textmodus wird am Bildschirm in Schwarz anstelle des
- üblichen Blau dargestellt.
- Sie können in diesem Modus allerdings nicht den Zeichensatz wechseln oder
- Satzzeichen verwenden,
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Außerdem gibt der mathematische Textmodus den Text in einer 
-\family typewriter
-
-\backslash
-textrm{}
-\family default
--Umgebung aus, obwohl eigentlich 
-\family typewriter
-
-\backslash
-mbox
-\family default
- (oder das 
-\family typewriter
-
-\backslash
-text
-\family default
- von AMS-LaTeX) die bessere Wahl wäre.
-\end_layout
-
+ des Knopfs 
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\font"
 \end_inset
 
- doch für einfache Texte ist das ausreichend.
+ der 
+\family sans
+Mathe-Werkzeugleiste
+\family default
+ aktivieren.
+ Mathematischer Text wird am Bildschirm in Schwarz anstelle des üblichen
+ Blau dargestellt.
+ Sie können in diesem Modus Leerzeichen und Akzente wie im normalen Text
+ verwenden.
  Hier ist ein Beispiel:
 \end_layout
 
@@ -25800,15 +25914,11 @@ displaystyle
  Außer einigen Operatoren, die ihre Größe an die jeweilige Situation anpassen,
  werden die Texte in der Größe gesetzt, die LaTeX für geeignet hält.
  Diese Größe kann mit dem Knopf 
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "math-insert \\style"
 \end_inset
 
-
-\family default
  der 
 \family sans
 Mathe-Werkzeugleiste
@@ -26798,7 +26908,7 @@ Tabellen!verzeichnis@-verzeichnis
 
 \end_inset
 
- und Algorithmenverzeichnisse
+, Listings- und Algorithmenverzeichnisse
 \begin_inset Index idx
 status collapsed
 
@@ -26819,8 +26929,8 @@ name "sec:Verzeichnisse"
 \end_layout
 
 \begin_layout Standard
-Tabellen-, Abbildungs-, und Algorithmenverzeichnisse sind sehr ähnlich zum
- Inhaltsverzeichnis.
+Tabellen-, Abbildungs-, Listings- und Algorithmenverzeichnisse sind sehr
+ ähnlich zum Inhaltsverzeichnis.
  Sie können über das Menü 
 \family sans
 Einfügen\SpecialChar \menuseparator
@@ -36528,8 +36638,8 @@ Liste / Inhaltsverzeichnis
 \begin_layout Standard
 Über dieses Menü können verschiedene Listen und Verzeichnisse eingefügt
  werden.
- Das Inhaltsverzeichnis, die Liste der Algorithmen, Abbildungen und Tabellen
- sind in Abschnitt
+ Das Inhaltsverzeichnis, die Liste der Algorithmen, Abbildungen, Listings
+ und Tabellen sind in Abschnitt
 \begin_inset space ~
 \end_inset
 

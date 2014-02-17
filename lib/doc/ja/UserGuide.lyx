@@ -50,6 +50,11 @@
 % change header rule width
 \renewcommand{\headrulewidth}{2pt}
 
+% used to have extra space in table cells
+\@ifundefined{extrarowheight}
+ {\usepackage{array}}{}
+\setlength{\extrarowheight}{2pt}
+
 \usepackage{t1enc}
 \renewcommand{\seename}{→}
 
@@ -4587,8 +4592,6 @@ status collapsed
 
 \begin_layout Subsubsection
 詩句
-\family sans
-
 \begin_inset Index idx
 status collapsed
 
@@ -4758,11 +4761,7 @@ reference "sec:入れ子"
 \end_layout
 
 \begin_layout Subsubsection
-
-\family sans
 箇条書き(記号)
-\family default
-
 \begin_inset Index idx
 status collapsed
 
@@ -4938,8 +4937,6 @@ reference "sec:入れ子"
 \end_layout
 
 \begin_layout Subsubsection
-
-\family sans
 箇条書き(連番)
 \begin_inset Index idx
 status collapsed
@@ -4950,8 +4947,6 @@ status collapsed
 
 \end_inset
 
-
-\family default
 
 \begin_inset CommandInset label
 LatexCommand label
@@ -5107,8 +5102,6 @@ reference "sec:入れ子"
 \end_layout
 
 \begin_layout Subsubsection
-
-\family sans
 箇条書き(記述)
 \begin_inset Index idx
 status collapsed
@@ -5174,7 +5167,7 @@ status collapsed
 を使用します(
 \begin_inset Info
 type  "shortcut"
-arg   "command-alternatives space-insert protected ; math-space"
+arg   "command-alternatives math-space ; space-insert protected"
 \end_inset
 
 と入力するか、
@@ -5246,9 +5239,7 @@ Example: これは
 \end_layout
 
 \begin_layout Subsubsection
-LyX
-\family sans
-リスト
+LyXリスト
 \begin_inset Index idx
 status collapsed
 
@@ -5348,7 +5339,7 @@ M」はアルファベット中でもっとも幅の広い文字なので、LaTe
 
 
 \begin_inset Note Greyedout
-status collapsed
+status open
 
 \begin_layout Plain Layout
 ラベル幅を変えるためだけにリスト項目にカーソルを設定しても、LyX内での幅が変わるだけで、出力には変わりありません。
@@ -6480,7 +6471,7 @@ Return
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -6506,7 +6497,7 @@ name "fig:概要環境内の段落"
 \family sans
 概要
 \family default
-環境内の段落
+環境内の段落。
 \end_layout
 
 \end_inset
@@ -6772,37 +6763,19 @@ arg   "newline-insert newline"
 \family sans
 Space
 \family default
-を入れることができません。
-\end_layout
+を入れることができません
+\lang english
+ but by a 
+\lang japanese
 
-\begin_deeper
-\begin_layout Itemize
-
-\family sans
-Return
-\family default
-を使って新しい段落を始めて、それから
-\family sans
-Space
-\family default
-を使って下さい。
-\end_layout
-
-\begin_layout Itemize
-または、
-\family sans
-Space
-\family default
-の代わりに
 \begin_inset Info
 type  "shortcut"
-arg   "command-alternatives space-insert protected ; math-space"
+arg   "command-alternatives math-space ; space-insert protected"
 \end_inset
 
-を使って下さい。
+。
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
 何も入っていない段落や何も入っていない行を作ることはできません。空白にしたい行には、少なくとも一つの
 \family sans
@@ -8762,15 +8735,11 @@ status collapsed
 \end_inset
 
 は
-\family sans
-
 \begin_inset Info
 type  "shortcut"
-arg   "command-alternatives space-insert protected ; math-space"
+arg   "command-alternatives math-space ; space-insert protected"
 \end_inset
 
-
-\family default
 )で挿入することができます。
 \end_layout
 
@@ -8993,6 +8962,42 @@ arg   "space-insert thin"
 \end_layout
 
 \begin_layout Description
+負の小空白 この行は、矢印の間に負の小空白
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+
+\begin_inset space \negmedspace{}
+\end_inset
+
+
+\begin_inset Formula $\leftarrow$
+\end_inset
+
+を含んでいます。
+\lang english
+medium
+\end_layout
+
+\begin_layout Description
+負の小空白 この行は、矢印の間に負の小空白
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+
+\begin_inset space \negthickspace{}
+\end_inset
+
+
+\begin_inset Formula $\leftarrow$
+\end_inset
+
+を含んでいます。
+\lang english
+thick
+\end_layout
+
+\begin_layout Description
 8分の1空白(enspace;
 \begin_inset space ~
 \end_inset
@@ -9128,7 +9133,7 @@ name "tab:空白の幅"
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="8" columns="2">
+<lyxtabular version="3" rows="10" columns="2">
 <features rotate="0" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -9229,7 +9234,7 @@ em
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -9238,7 +9243,7 @@ em
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -9247,6 +9252,66 @@ em
 \end_inset
 
 em
+\begin_inset Formula $\thinspace=\thinspace$
+\end_inset
+
+-3
+\begin_inset space \thinspace{}
+\end_inset
+
+mu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+Negative medium
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-4
+\begin_inset space \thinspace{}
+\end_inset
+
+mu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+Negative thick
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-5
+\begin_inset space \thinspace{}
+\end_inset
+
+mu
 \end_layout
 
 \end_inset
@@ -9351,7 +9416,7 @@ em
 \begin_layout Subsubsection
 水平フィル
 \begin_inset Index idx
-status open
+status collapsed
 
 \begin_layout Plain Layout
 くうはく@空白!ふぃる@フィル
@@ -19598,29 +19663,21 @@ status collapsed
 
 \begin_layout Standard
 LaTeXの提供する標準的な余白取りとは異なる余白を使いたいことがあるかもしれません。この場合は、
-\family sans
-
 \begin_inset Info
 type  "shortcut"
-arg   "command-alternatives space-insert protected ; math-space"
+arg   "command-alternatives math-space ; space-insert protected"
 \end_inset
 
-
-\family default
 を押すか、
 \family sans
 数式パネル
 \family default
 のボタン
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "math-insert \\space"
 \end_inset
 
-
-\family default
 を使用してください。これは小さな空白を追加するもので、画面上には小さなマーカーが表示されます。例えば、
 \series bold
 a Ctrl+Space b
@@ -19718,15 +19775,11 @@ name "sub:関数"
 数式パネル
 \family default
 の
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "math-insert \\functions"
 \end_inset
 
-
-\family default
 ボタンの中には、
 \begin_inset Formula $\sin$
 \end_inset
@@ -20477,15 +20530,11 @@ status collapsed
 
 \begin_layout Standard
 LyXでは、行列は数式パネルの行列ボタン
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "dialog-show mathmatrix"
 \end_inset
 
-
-\family default
 を使用して入力します。これを押すとダイアログが表示されますので、行数と列数を指定してください。以下が作例です。 
 \begin_inset Formula 
 \[
@@ -20899,15 +20948,11 @@ status collapsed
 
 \begin_layout Standard
 文字の標準フォントはイタリック体であり、数字の標準フォントはローマン体です。数式中でフォントを指定するには、数式パネルの
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "math-insert \\font"
 \end_inset
 
-
-\family default
 ボタンを使用するか、第
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -21317,49 +21362,17 @@ status collapsed
 数式パネル
 \family default
 の中の
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "math-insert \\font"
 \end_inset
 
-
-\family default
 ボタンにある項目「
 \family sans
 標準テキストモード
 \family default
-」(あるいは
-\begin_inset Flex Ruby
-status collapsed
-
-\begin_layout Plain Layout
-捷径
-\begin_inset Argument post:1
-status collapsed
-
-\begin_layout Plain Layout
-ショートカット
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\family sans
-Alt-M
-\begin_inset space ~
-\end_inset
-
-M
-\family default
-)を選択して得られる、数式内文章を使用してください。LyX内では、数式内文章は、青色ではなく黒色で表示されます。数式内文章では、通常の本文と同様に空白やアクセン
-トが使用できます。以下の例をご覧ください。
+」(あるいを選択して得られる、数式内文章を使用してください。LyX内では、数式内文章は、青色ではなく黒色で表示されます。数式内文章では、通常の本文と同様に空白や
+アクセントが使用できます。以下の例をご覧ください。
 \begin_inset Formula 
 \[
 f(x)=\begin{cases}
@@ -22227,7 +22240,11 @@ reference "sub:番号の付け方-深度"
 \end_layout
 
 \begin_layout Subsection
-図・表・アルゴリズム一覧
+図・表・
+\lang english
+Listings
+\lang japanese
+・アルゴリズム一覧
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:図・表・アルゴリズム一覧"
@@ -22238,7 +22255,11 @@ name "sec:図・表・アルゴリズム一覧"
 \end_layout
 
 \begin_layout Standard
-図・表・アルゴリズム一覧は目次によく似ています。これらは、
+図・表・
+\lang english
+Listings
+\lang japanese
+・アルゴリズム一覧は目次によく似ています。これらは、
 \family sans
 挿入\SpecialChar \menuseparator
 一覧／目次
@@ -30067,7 +30088,11 @@ reference "sub:改段改頁"
 \end_layout
 
 \begin_layout Standard
-このメニューでは、さまざまな一覧を挿入することができます。目次およびアルゴリズム・図・表一覧に関しては、第
+このメニューでは、さまざまな一覧を挿入することができます。目次およびアルゴリズム・図・
+\lang english
+Listings
+\lang japanese
+・表一覧に関しては、第
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:目次と一覧"

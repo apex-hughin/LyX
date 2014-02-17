@@ -42,6 +42,11 @@
 % change header rule width
 \renewcommand{\headrulewidth}{2pt}
 
+% used to have extra space in table cells
+\@ifundefined{extrarowheight}
+ {\usepackage{array}}{}
+\setlength{\extrarowheight}{2pt}
+
 % workaround for a makeindex bug, 
 % see sec. "Index Entry Order"
 % only uncomment this when you are using makindex
@@ -4124,8 +4129,6 @@ Document\SpecialChar \menuseparator
 Paramètres
 \family default
  :
-\family sans
-
 \begin_inset Index idx
 status collapsed
 
@@ -5517,13 +5520,7 @@ Standard
 \end_layout
 
 \begin_layout Subsubsection
-
-\family sans
-Cite
-\family default
- et 
-\family sans
-Citation 
+Cite et Citation 
 \begin_inset Index idx
 status collapsed
 
@@ -5533,8 +5530,6 @@ Citation
 
 \end_inset
 
-
-\family default
 
 \begin_inset CommandInset label
 LatexCommand label
@@ -5854,8 +5849,6 @@ reference "sec:Emboîter-les-Environnements"
 \end_layout
 
 \begin_layout Subsubsection
-
-\family sans
 ListePuces
 \begin_inset Index idx
 status collapsed
@@ -6063,8 +6056,6 @@ reference "sec:Emboîter-les-Environnements"
 \end_layout
 
 \begin_layout Subsubsection
-
-\family sans
 Énumération
 \begin_inset Index idx
 status collapsed
@@ -6331,7 +6322,7 @@ Insécable
  (Soit avec 
 \begin_inset Info
 type  "shortcut"
-arg   "command-alternatives space-insert protected ; math-space"
+arg   "command-alternatives math-space ; space-insert protected"
 \end_inset
 
  soit avec 
@@ -6420,11 +6411,7 @@ Notez qu'après la première ligne, LyX indente les lignes suivantes en les
 \end_layout
 
 \begin_layout Subsubsection
-
-\family sans
 Étiquetage
-\family default
-
 \begin_inset Index idx
 status collapsed
 
@@ -7619,15 +7606,7 @@ letter
 \end_layout
 
 \begin_layout Subsubsection
-
-\family sans
-Envoi à l'adresse
-\family default
- et 
-\family sans
-Mon_Adresse
-\family default
- : résumé
+Envoi à l'adresse et Mon_Adresse : résumé
 \end_layout
 
 \begin_layout Standard
@@ -8016,7 +7995,7 @@ name "fig:Paragraphe-dans-l'environnement"
 
 Paragraphe dans l'environnement 
 \family sans
-Résumé
+Résumé.
 \end_layout
 
 \end_inset
@@ -8064,8 +8043,6 @@ résumé
 \end_layout
 
 \begin_layout Subsubsection
-
-\family sans
 Bibliographie
 \begin_inset Index idx
 status collapsed
@@ -8300,31 +8277,17 @@ arg   "newline-insert newline"
 
  d'une 
 \family sans
-Espace;
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-utilisez 
-\family sans
-Entrée
+Espace 
 \family default
- pour commencer un nouveau paragraphe, vous pourrez alors utiliser une 
-\family sans
-Espace,
-\end_layout
-
-\begin_layout Itemize
-ou utilisez 
+mais d'une 
 \begin_inset Info
 type  "shortcut"
-arg   "command-alternatives space-insert protected ; math-space"
+arg   "command-alternatives math-space ; space-insert protected"
 \end_inset
 
- à la place,
+.
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
 vous ne pouvez pas avoir un paragraphe vide ou une ligne vide.
  Vous devez mettre au moins une 
@@ -10748,7 +10711,7 @@ insécable
  (raccourci 
 \begin_inset Info
 type  "shortcut"
-arg   "command-alternatives space-insert protected ; math-space"
+arg   "command-alternatives math-space ; space-insert protected"
 \end_inset
 
 ).
@@ -11002,6 +10965,70 @@ Espace
 \begin_inset space ~
 \end_inset
 
+
+\lang english
+medium
+\lang french
+
+\begin_inset space ~
+\end_inset
+
+négative Une ligne avec 
+\begin_inset Formula $\to$
+\end_inset
+
+
+\begin_inset space \negmedspace{}
+\end_inset
+
+
+\begin_inset Formula $\gets$
+\end_inset
+
+ une espace 
+\lang english
+medium
+\lang french
+ négative entre les flèches.
+\end_layout
+
+\begin_layout Description
+Espace
+\begin_inset space ~
+\end_inset
+
+
+\lang english
+thick
+\lang french
+
+\begin_inset space ~
+\end_inset
+
+négative Une ligne avec 
+\begin_inset Formula $\to$
+\end_inset
+
+
+\begin_inset space \negthickspace{}
+\end_inset
+
+
+\begin_inset Formula $\gets$
+\end_inset
+
+ une espace 
+\lang english
+thick
+\lang french
+ négative entre les flèches.
+\end_layout
+
+\begin_layout Description
+Espace
+\begin_inset space ~
+\end_inset
+
 en
 \begin_inset space ~
 \end_inset
@@ -11169,7 +11196,7 @@ Largeur des différents espacements horizontaux.
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="8" columns="2">
+<lyxtabular version="3" rows="10" columns="2">
 <features rotate="0" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -11246,7 +11273,7 @@ em
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11255,7 +11282,7 @@ Fine
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11270,7 +11297,91 @@ em
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Négative fine
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1/6
+\begin_inset space \thinspace{}
+\end_inset
+
+em
+\begin_inset Formula $\thinspace=\thinspace$
+\end_inset
+
+-3
+\begin_inset space \thinspace{}
+\end_inset
+
+mu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Négative 
+\lang english
+medium
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-4
+\begin_inset space \thinspace{}
+\end_inset
+
+mu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Négative 
+\lang english
+thick
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-5
+\begin_inset space \thinspace{}
+\end_inset
+
+mu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11279,7 +11390,7 @@ Espace en
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11294,7 +11405,7 @@ em
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11307,7 +11418,7 @@ em)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11322,7 +11433,7 @@ em
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11335,35 +11446,11 @@ em)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 2
-\begin_inset space \thinspace{}
-\end_inset
-
-em
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Négative fine
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--1/6
 \begin_inset space \thinspace{}
 \end_inset
 
@@ -24287,25 +24374,17 @@ Math ! Espacement
 Vous voudrez peut-être créer des espaces qui soient différents de l'espacement
  proposé implicitement par LaTeX.
  Pour cela, tapez 
-\family sans
-
 \begin_inset Info
 type  "shortcut"
-arg   "command-alternatives space-insert protected ; math-space"
+arg   "command-alternatives math-space ; space-insert protected"
 \end_inset
 
-
-\family default
  ou utilisez le bouton 
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "math-insert \\space"
 \end_inset
 
-
-\family default
  de la 
 \family sans
 Palette
@@ -24405,15 +24484,11 @@ Palette
 mathématique
 \family default
  contient sous le bouton 
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "math-insert \\functions"
 \end_inset
 
-
-\family default
  un certain nombre de 
 \begin_inset Quotes fld
 \end_inset
@@ -25027,9 +25102,9 @@ Il y a plusieurs délimiteurs disponibles avec LyX.
 <>
 \family default
  devraient suffire, mais l'effet est meilleur avec l'icône 
-\begin_inset Graphics
-	filename ../../images/math/delim.png
-
+\begin_inset Info
+type  "icon"
+arg   "dialog-show mathdelimiter"
 \end_inset
 
  de la barre d'outils math, surtout si vous voulez encadrer une grande structure
@@ -25052,7 +25127,7 @@ Il y a plusieurs délimiteurs disponibles avec LyX.
 
 pour rendre plus visibles les niveaux de parenthèses.
  Ci-dessous, l'expression de gauche a été saisie en utilisant l'icône de
- délimitation
+ délimitation 
 \begin_inset Info
 type  "icon"
 arg   "dialog-show mathdelimiter"
@@ -25158,18 +25233,14 @@ mathématique
 \family default
 : il y a un bouton 
 \family sans
-Matrice
+Mat
 \family default
- 
-\family sans
-
+rice 
 \begin_inset Info
 type  "icon"
 arg   "dialog-show mathmatrix"
 \end_inset
 
-
-\family default
 , qui ouvre une fenêtre pour choisir le nombre de lignes et de colonnes.
  Voici un exemple :
 \end_layout
@@ -25753,15 +25824,11 @@ La police standard pour du texte est l'italique,
 , mais pour les nombres le standard est le romain.
  Pour obtenir une police donnée dans une formule, choisissez-la dans la
  palette mathématique en utilisant le bouton 
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "math-insert \\font"
 \end_inset
 
-
-\family default
 , ou entrez la commande LaTeX directement, comme c'est indiqué dans la table
 \begin_inset space ~
 \end_inset
@@ -26283,16 +26350,12 @@ texte
 normal
 \family default
  sous le bouton 
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "math-insert \\font"
 \end_inset
 
- 
-\family default
-de la
+ de la
 \family sans
  Palette
 \begin_inset space ~
@@ -26300,15 +26363,7 @@ de la
 
 mathématique
 \family default
- (vous pouvez aussi utiliser le raccourci clavier 
-\family sans
-Alt-M
-\begin_inset space ~
-\end_inset
-
-M
-\family default
-).
+.
  Le texte mathématique apparaît dans LyX en noir plutôt qu'en bleu comme
  les autres éléments de formules.
  Dans le texte mathématique, vous pouvez utiliser des espaces et des accents
@@ -26416,15 +26471,11 @@ ligne
  aux différentes situations, tous le texte va être mis dans le style que
  LaTeX juge approprié.
  On peut passer outre ces choix en utilisant le bouton 
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "math-insert \\style"
 \end_inset
 
-
-\family default
  de la palette mathématique.
  Une boîte va être insérée dans laquelle vous pouvez utiliser la taille
  choisie.
@@ -27514,7 +27565,7 @@ reference "sub:Profondeur-section"
 \end_layout
 
 \begin_layout Subsection
-Liste des figures, des tableaux et des algorithmes
+Liste des figures, des tableaux, des listings et des algorithmes
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:Liste-des-figures,"
@@ -27525,8 +27576,8 @@ name "sub:Liste-des-figures,"
 \end_layout
 
 \begin_layout Standard
-Les listes des figures, des tableaux et des algorithmes sont à peu près
- comme la tables des matières.
+Les listes des figures, des tableaux, des listings et des algorithmes sont
+ à peu près comme la tables des matières.
  Vous pouvez les insérer avec le menu 
 \family sans
 Insertion\SpecialChar \menuseparator
@@ -37418,8 +37469,8 @@ Listes & TdM
 
 \begin_layout Standard
 Plusieurs listes peuvent être insérées avec ce menu.
- La table des matières, la table des algorithmes, des figures et des tableaux
- sont décrits dans la section
+ La table des matières, la table des algorithmes, des figures, des listings
+ et des tableaux sont décrits dans la section
 \begin_inset space ~
 \end_inset
 

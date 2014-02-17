@@ -42,6 +42,11 @@
 % change header rule width
 \renewcommand{\headrulewidth}{2pt}
 
+% used to have extra space in table cells
+\@ifundefined{extrarowheight}
+ {\usepackage{array}}{}
+\setlength{\extrarowheight}{2pt}
+
 % workaround for a makeindex bug, 
 % see sec. "Index Entry Order"
 % only uncomment this when you are using makindex
@@ -3539,6 +3544,13 @@ reference "sub:Encabezados"
 
 \begin_layout Subsection
 Formato de un documento
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Formato-de-documento"
+
+\end_inset
+
+
 \begin_inset Index idx
 status collapsed
 
@@ -3548,15 +3560,6 @@ Documentos ! Formato
 
 \end_inset
 
-
-\begin_inset CommandInset label
-LatexCommand label
-name "sub:Formato-de-documento"
-
-\end_inset
-
-
-\family sans
 
 \begin_inset Index idx
 status collapsed
@@ -3783,8 +3786,6 @@ de
 página
 \family default
  encontrarás las siguientes opciones:
-\family sans
-
 \begin_inset Index idx
 status collapsed
 
@@ -5231,8 +5232,6 @@ Párrafos ! Verso
 
 \end_inset
 
-
-\family sans
 
 \begin_inset Index idx
 status collapsed
@@ -7475,21 +7474,11 @@ Cartas
 \end_layout
 
 \begin_layout Subsubsection
-Introducción a 
-\family sans
-Dirección
-\family default
- y 
-\family sans
-Dirección
+Introducción a Dirección y Dirección
 \begin_inset space ~
 \end_inset
 
-
-\family default
-d
-\family sans
-erecha
+derecha
 \end_layout
 
 \begin_layout Standard
@@ -7733,8 +7722,6 @@ Los escritos académicos suelen comenzar con un resumen y finalizar con una
 
 \begin_layout Subsubsection
 Resumen
-\family sans
-
 \begin_inset Index idx
 status collapsed
 
@@ -7863,7 +7850,7 @@ name "fig:Párrafo-en"
 
 Párrafo en un entorno 
 \family sans
-Resumen
+Resumen.
 \end_layout
 
 \end_inset
@@ -8129,31 +8116,13 @@ Ctrl+Entrar
 \family sans
 Espacio
 \family default
-.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Usa un 
-\family sans
-Entrar
-\family default
- para iniciar un párrafo, entonces puedes poner un 
-\family sans
-Espacio
-\family default
-.
-\end_layout
-
-\begin_layout Itemize
-O: usa 
+ pero con 
 \family sans
 Ctrl+Espacio
 \family default
- en su lugar.
+.
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
 No puede tener un párrafo vacío o una línea vacía.
  Al menos debes poner un 
@@ -10624,6 +10593,54 @@ negativo Espacio delgado negativo
 \end_layout
 
 \begin_layout Description
+Espacio
+\begin_inset space ~
+\end_inset
+
+medio
+\begin_inset space ~
+\end_inset
+
+negativo Espacio medio negativo 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+
+\begin_inset space \negmedspace{}
+\end_inset
+
+
+\begin_inset Formula $\leftarrow$
+\end_inset
+
+ entre las flechas.
+\end_layout
+
+\begin_layout Description
+Espacio
+\begin_inset space ~
+\end_inset
+
+gordo
+\begin_inset space ~
+\end_inset
+
+negativo Espacio gordo negativo 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+
+\begin_inset space \negthickspace{}
+\end_inset
+
+
+\begin_inset Formula $\leftarrow$
+\end_inset
+
+ entre las flechas.
+\end_layout
+
+\begin_layout Description
 Medio
 \begin_inset space ~
 \end_inset
@@ -10753,7 +10770,6 @@ reference "tab:Anchura-espacios"
 \end_inset
 
  se encuentran los distintos tamaños de los espacios.
- 
 \end_layout
 
 \begin_layout Standard
@@ -10783,7 +10799,7 @@ Anchura de los distintos espacios horizontales.
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="8" columns="2">
+<lyxtabular version="3" rows="10" columns="2">
 <features rotate="0" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -10884,7 +10900,7 @@ em
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10893,7 +10909,7 @@ Delgado negativo
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10902,6 +10918,62 @@ Delgado negativo
 \end_inset
 
 em
+\begin_inset Formula $\thinspace=\thinspace$
+\end_inset
+
+-3
+\begin_inset space \thinspace{}
+\end_inset
+
+mu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Medio negativo 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-4
+\begin_inset space \thinspace{}
+\end_inset
+
+mu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gordo negativo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-5
+\begin_inset space \thinspace{}
+\end_inset
+
+mu
 \end_layout
 
 \end_inset
@@ -23643,15 +23715,11 @@ El espacio estándar provisto por LaTeX se puede cambiar.
 Ctrl+Espacio
 \family default
  o usa el botón 
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "math-insert \\space"
 \end_inset
 
-
-\family default
  de los 
 \family sans
 Paneles de ecuaciones
@@ -23746,15 +23814,11 @@ name "sub:Funciones"
 
 \begin_layout Standard
 El botón 
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "math-insert \\functions"
 \end_inset
 
-
-\family default
  abre el 
 \family sans
 Panel
@@ -24748,15 +24812,11 @@ Matemáticas ! Ecuaciones multilínea
 
 \begin_layout Standard
 Las matrices se introducen con el botón 
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "dialog-show mathmatrix"
 \end_inset
 
-
-\family default
  de la 
 \family sans
 Barra
@@ -25307,18 +25367,14 @@ Matemáticas ! Estilos de la tipografía
 \begin_layout Standard
 La tipografía estándar para el texto es cursiva, y para números es romana.
  Para establecer una tipografía en una ecuación usa el botón 
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "math-insert \\font"
 \end_inset
 
-
-\family default
- de 
+ de Pa
 \family sans
-Paneles de ecuaciones
+neles de ecuaciones
 \family default
 , o introduce directamente el comando adecuado, según el cuadro
 \begin_inset space ~
@@ -25786,28 +25842,16 @@ Modo texto
 normal
 \family default
  en la lista desplegable que surge al pulsar el botón 
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "math-insert \\font"
 \end_inset
 
-
-\family default
  de los 
 \family sans
 Paneles de ecuaciones
 \family default
- (o bien el atajo 
-\family sans
-Alt+C
-\begin_inset space ~
-\end_inset
-
-Espacio
-\family default
-).
+.
  En LyX, el texto normal dentro de una ecuación aparece en negro, no en
  azul.
  Puedes usar espacios y acentos de la manera habitual.
@@ -25904,15 +25948,11 @@ presentación.
 Panel de ecuaciones con el
 \family default
  botón 
-\family sans
-
 \begin_inset Info
 type  "icon"
 arg   "math-insert \\style"
 \end_inset
 
-
-\family default
 .
  Aparece un rectángulo de tamaño adecuado al estilo elegido en el que puedes
  insertar la estructura matemática.
@@ -26952,12 +26992,12 @@ reference "sub:Profundidad-de-numeración"
 \end_layout
 
 \begin_layout Subsection
-Índices de figuras, cuadros y algoritmos
+Índices de figuras, cuadros, listados de código y algoritmos
 \end_layout
 
 \begin_layout Standard
-Los índices de cuadros, figuras y algoritmos son muy parecidos al índice
- general.
+Los índices de cuadros, figuras, listados de código y algoritmos son muy
+ parecidos al índice general.
  Se insertan mediante los submenús de 
 \family sans
 Insertar\SpecialChar \menuseparator
@@ -36124,8 +36164,8 @@ reference "sub:Salto-de-página-limpia"
 
 \begin_layout Standard
 Con este menú se pueden insertar varios tipos de índices.
- El índice general y los índices de algoritmos, de figuras y de cuadros
- se describen en la sección
+ El índice general y los índices de algoritmos, de figuras, de listados
+ de código y de cuadros se describen en la sección
 \begin_inset space ~
 \end_inset
 

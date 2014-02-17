@@ -92,15 +92,11 @@
 % Beispielmakro aus Kap. 19.4
 %\def\tagform@#1{\maketag@@@{|#1|}}
 
-% Makro aus Kap. 10.2
-\def\clap#1{\hbox to 0pt{\hss #1\hss}}
-\def\mathclap {\mathpalette \mathclapinternal}
-\def\mathclapinternal #1#2{\clap{$\mathsurround =0pt #1{#2}$}}
-
 % Damit der Index einen anderen Namen erhält.
 \addto\captionsngerman
 {\renewcommand{\indexname}
 {Stichwort- und Befehlsverzeichnis}}
+
 
 % ------------------------------------
 % used to check for needed LaTeX packages
@@ -194,7 +190,7 @@
 \use_package cancel 0
 \use_package esint 1
 \use_package mathdots 1
-\use_package mathtools 0
+\use_package mathtools 1
 \use_package mhchem 1
 \use_package stackrel 0
 \use_package stmaryrd 0
@@ -300,7 +296,7 @@ status open
 Um diese Datei als PDF, PS oder DVI zu exportieren, sollten die LaTeX-Pakete
  
 \series bold
-braket, cancel, eurosym, mathdots, mhchem, undertilde
+braket, cancel, eurosym, mathdots, mathtools, mhchem, undertilde
 \series default
  und 
 \series bold
@@ -502,10 +498,9 @@ Formel ! eingebettete
 Strg+M
 \family default
  oder den Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/math-mode.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-mode"
 \end_inset
 
 .
@@ -653,10 +648,9 @@ T@TeX-Modus
 \end_inset
 
  gelangt man über den Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/ert-insert.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "ert-insert"
 \end_inset
 
  oder das Menü 
@@ -1507,18 +1501,16 @@ status collapsed
 \begin_layout Standard
 Indizes werden mit dem Unterstrich _ oder mit dem Mathe-Werkzeugleistenknopf
  
-\begin_inset Graphics
-	filename ../../images/math-subscript.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-subscript"
 \end_inset
 
 , Exponenten mit dem Zirkumflexzeichen ^ oder mit dem Mathe-Werkzeugleistenknopf
  
-\begin_inset Graphics
-	filename ../../images/math-superscript.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-superscript"
 \end_inset
 
  erzeugt.
@@ -1705,20 +1697,18 @@ frac
 \end_inset
 
  oder mit dem Mathe-Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/math/frac.png
-	scale 50
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\frac"
 \end_inset
 
  erstellt.
  Die Zeichengröße wird automatisch angepasst, je nachdem, ob sich der Bruch
  in einer eingebetteten oder abgesetzten Formel befindet.
  Mit dem Mathe-Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/math/frac-square.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\frac-square"
 \end_inset
 
  können verschieden Bruchtypen gewählt werden.
@@ -2305,10 +2295,9 @@ sqrt
 \end_inset
 
  oder dem Mathe-Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/math/sqrt.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\sqrt"
 \end_inset
 
  gesetzt, alle anderen Wurzeln mit dem Befehl 
@@ -2330,10 +2319,9 @@ root
 \end_inset
 
  oder dem Mathe-Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/math/root.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\root"
 \end_inset
 
 .
@@ -2621,13 +2609,12 @@ binom
 \end_inset
 
  oder über das Untermenü des Mathe-Werkzeugleistenknopfs 
-\begin_inset Graphics
-	filename ../../images/math/frac-square.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\frac-square"
 \end_inset
 
-eingefügt werden.
+ eingefügt werden.
  Analog zu Brüchen (
 \series bold
 
@@ -3065,10 +3052,9 @@ Nach der Eingabe von
 cases
 \series default
  oder der Benutzung des Mathe-Werkzeugleistenknopfs 
-\begin_inset Graphics
-	filename ../../images/math/cases.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\cases"
 \end_inset
 
  können mit 
@@ -3076,10 +3062,9 @@ cases
 Strg+Enter
 \family default
  oder dem Tabellen-Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/tabular-feature_append-row.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "inset-modify tabular append-row"
 \end_inset
 
  neue Zeilen erstellt werden.
@@ -3487,10 +3472,9 @@ status collapsed
 
 \begin_layout Plain Layout
 zu finden im Untermenü des Mathe-Werkzeugleistenknopfs 
-\begin_inset Graphics
-	filename ../../images/math/space.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\space"
 \end_inset
 
 
@@ -4210,10 +4194,9 @@ status collapsed
 
 \begin_layout Plain Layout
 In der Mathe-Werkzeugleiste zu finden im Untermenü des Knopfs 
-\begin_inset Graphics
-	filename ../../images/math/ldots.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\ldots"
 \end_inset
 
 
@@ -4798,10 +4781,9 @@ Matrizen können über den Mathe-Werkzeugleistenknopf
  
 \family default
 
-\begin_inset Graphics
-	filename ../../images/dialog-show_mathmatrix.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "dialog-show mathmatrix"
 \end_inset
 
  oder das Menü 
@@ -4937,17 +4919,15 @@ C & F & 10000
 \begin_layout Standard
 Um nachträglich Zeilen und Spalten hinzuzufügen oder zu entfernen, kann
  man die Mathe-Werkzeugleistenknöpfe 
-\begin_inset Graphics
-	filename ../../images/tabular-feature_append-row.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "inset-modify tabular append-row"
 \end_inset
 
 , 
-\begin_inset Graphics
-	filename ../../images/tabular-feature_delete-row.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "inset-modify tabular delete-row"
 \end_inset
 
 , usw.
@@ -6651,10 +6631,9 @@ right
  
 \family default
 
-\begin_inset Graphics
-	filename ../../images/dialog-show_mathdelimiter.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "dialog-show mathdelimiter"
 \end_inset
 
  eingefügt werden.
@@ -7443,10 +7422,9 @@ Pfeile
 
 \begin_layout Standard
 Pfeile können über den Mathe-Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/math/leftarrow.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\leftarrow"
 \end_inset
 
  oder mit den Befehlen eingefügt werden, die in den folgenden Unterkapiteln
@@ -8803,10 +8781,9 @@ Akzente
 
 \begin_layout Standard
 Akzente können über den Mathe-Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/math/hat.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\hat"
 \end_inset
 
  oder mit den Befehlen eingefügt werden, die in den folgenden Unterkapiteln
@@ -10238,10 +10215,9 @@ Ab und an ist es notwendig in einer Formel horizontalen Leerraum einzufügen.
  und man kann durch mehrfaches Drücken der Leertaste aus acht verschiedenen
  Leerraum-Größen wählen.
  Man kann die Leerräume auch über den Mathe-Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/math/space.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\space"
 \end_inset
 
  oder mit einzelnen Befehlen aufrufen.
@@ -10251,20 +10227,12 @@ Ab und an ist es notwendig in einer Formel horizontalen Leerraum einzufügen.
 
 \begin_layout Standard
 \align center
-\begin_inset VSpace -5mm
-\end_inset
-
-
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="7">
+<lyxtabular version="3" rows="6" columns="3">
 <features rotate="0" tabularvalignment="middle">
-<column alignment="center" valignment="middle" width="6.8cm">
-<column alignment="center" valignment="top" width="0pt">
-<column alignment="center" valignment="top" width="0pt">
-<column alignment="center" valignment="top" width="0pt">
-<column alignment="center" valignment="top" width="0pt">
-<column alignment="center" valignment="top" width="0pt">
-<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="15col%">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -10279,53 +10247,7 @@ Befehl
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\backslash
-,
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\backslash
-:
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\backslash
-;
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\backslash
-quad
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\backslash
-qquad
+Anzahl der Leertastendrücke
 \end_layout
 
 \end_inset
@@ -10334,25 +10256,25 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\backslash
-!
+Ergebnis
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none" width="7cm">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Anzahl der Leertastendrücke nach Eingabe des geschützten Leerzeichens
+
+\backslash
+,
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10361,63 +10283,7 @@ Anzahl der Leertastendrücke nach Eingabe des geschützten Leerzeichens
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multicolumn="1" alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Ergebnis
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10429,7 +10295,29 @@ Ergebnis
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10441,7 +10329,29 @@ Ergebnis
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+;
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10453,7 +10363,29 @@ Ergebnis
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+quad
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10465,7 +10397,29 @@ Ergebnis
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10477,7 +10431,213 @@ Ergebnis
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="15col%">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Befehl
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Anzahl der Leertastendrücke
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ergebnis
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+hfill
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\hfill B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+hspace*{1em}
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\hspace*{1em}B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+hspace{1em}
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\hspace{1em}B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+
+\begin_inset space \textvisiblespace{}
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\ B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+!
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10498,9 +10658,33 @@ Ergebnis
 \end_layout
 
 \begin_layout Standard
-Die letzte Größe scheint überhaupt keinen Leerraum zu produzieren.
- In LyX ist diese allerdings auch im Gegensatz zu allen anderen rot eingefärbt,
- denn sie erstellt negativen Leerraum.
+Leerraum
+\begin_inset space ~
+\end_inset
+
+5
+\begin_inset space \thinspace{}
+\end_inset
+
+--
+\begin_inset space \thinspace{}
+\end_inset
+
+7 sind variable Leerräume, die in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Variabler-Leerraum"
+
+\end_inset
+
+ erläutert sind.
+ Leerraum
+\begin_inset space ~
+\end_inset
+
+9 scheint überhaupt keinen Leerraum zu produzieren.
+ Er ist in LyX allerdings auch im Gegensatz zu allen anderen rot eingefärbt,
+ denn er erstellt negativen Leerraum.
  Es gibt noch zwei weitere negative Leerräume:
 \end_layout
 
@@ -10559,7 +10743,7 @@ Anzahl der Leertastendrücke nach Eingabe des geschützten Leerzeichens
 \begin_inset Text
 
 \begin_layout Plain Layout
-6
+10
 \end_layout
 
 \end_inset
@@ -10568,7 +10752,7 @@ Anzahl der Leertastendrücke nach Eingabe des geschützten Leerzeichens
 \begin_inset Text
 
 \begin_layout Plain Layout
-7
+11
 \end_layout
 
 \end_inset
@@ -10741,6 +10925,15 @@ f_kl
 \end_layout
 
 \begin_layout Standard
+\noindent
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
 Relationen, wie z.
 \begin_inset space \thinspace{}
 \end_inset
@@ -10935,6 +11128,13 @@ kleinster Leerraum zwischen Wert und Einheit
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Variabler Leerraum
 \begin_inset ERT
@@ -11086,7 +11286,45 @@ hspace
 
  klickt.
  Die Länge darf auch negativ sein.
- Um so viel Leerraum einzufügen, dass die Formel allen verfügbaren Platz
+ Wenn ein Leerraum das erste Zeichen in einer Zeile ist, wird er automatisch
+ weggelassen.
+ Um seine Ausgabe zu erzwingen, verwendet man den Befehl 
+\series bold
+
+\backslash
+hspace*
+\series default
+ statt 
+\series bold
+
+\backslash
+hspace
+\series default
+ oder klickt mit der linken Maustaste auf das 
+\begin_inset Quotes gld
+\end_inset
+
+
+\color blue
+
+\begin_inset space \textvisiblespace{}
+\end_inset
+
+
+\color inherit
+
+\begin_inset Quotes grd
+\end_inset
+
+ und wählt die Option 
+\family sans
+Schützen
+\family default
+ aus.
+\begin_inset Newline newline
+\end_inset
+
+Um so viel Leerraum einzufügen, dass die Formel allen verfügbaren Platz
  einnimmt, benutzt man den Befehl 
 \series bold
 
@@ -11151,8 +11389,8 @@ Ergebnis
 \begin_layout Plain Layout
 A=B
 \backslash
-hspace{3cm
-\begin_inset Formula $\to$
+hspace
+\begin_inset space \textvisiblespace{}
 \end_inset
 
 A
@@ -11186,8 +11424,8 @@ cm)
 \begin_layout Plain Layout
 A
 \backslash
-hspace{-1mm
-\begin_inset Formula $\to$
+hspace
+\begin_inset space \textvisiblespace{}
 \end_inset
 
 A
@@ -12832,10 +13070,9 @@ Textstil
 \family default
  die gewünschte Farbe aus.
  Der Dialog kann mit dem Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/dialog-show_character.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "dialog-show character"
 \end_inset
 
  oder dem Menü 
@@ -13316,10 +13553,9 @@ Einfügen\SpecialChar \menuseparator
 Box
 \family default
  oder dem Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/box-insert.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "box-insert"
 \end_inset
 
  kann man eine Box erstellen, die mehrere Zeilen und Absätze enthalten kann,
@@ -14583,10 +14819,9 @@ biguplus
 
 \begin_layout Standard
 Alle großen Operatoren können auch über den Mathe-Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/math/intop.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\intop"
 \end_inset
 
  eingefügt werden.
@@ -15333,54 +15568,7 @@ reference "eq:substack"
 
  kann es vorkommen, dass sich neben dem Operator zu viel Leerraum befindet,
  denn das dem Operator folgende Zeichen wird neben die Grenzen gesetzt.
-\end_layout
-
-\begin_layout Standard
-Um das zu verhindern, kann man folgendes Makro in den LaTeX-Vorspann einfügen:
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-
-\backslash
-def
-\backslash
-clap#1{
-\backslash
-hbox to 0pt{
-\backslash
-hss #1
-\backslash
-hss}}
-\begin_inset Newline newline
-\end_inset
-
-
-\backslash
-def
-\backslash
-mathclap {
-\backslash
-mathpalette 
-\backslash
-mathclapinternal}
-\begin_inset Newline newline
-\end_inset
-
-
-\backslash
-def
-\backslash
-mathclapinternal #1#2{
-\backslash
-clap{$
-\backslash
-mathsurround =0pt #1{#2}$}}
-\end_layout
-
-\begin_layout Standard
-Dadurch wird der Befehl 
+ Um das zu verhindern, kann man den Befehl 
 \series bold
 
 \backslash
@@ -15398,27 +15586,14 @@ mathclap
 
 \end_inset
 
- definiert, der die Breite der Grenze auf 0
+ verwenden, der die Breite seines Inhalts auf 0
 \begin_inset space \thinspace{}
 \end_inset
 
 pt setzt.
- Das Befehlsschema lautet
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
-
-\series bold
-
-\backslash
-mathclap{Grenze}
-\end_layout
-
-\begin_layout Standard
-wobei die Grenze auch aus mehreren Bedingungen bestehen kann.
-\end_layout
-
-\begin_layout Standard
 Auf Formel 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -15426,7 +15601,7 @@ reference "eq:substack"
 
 \end_inset
 
- angewandt, gibt man also den Befehl
+ angewandt, gibt man den Befehl
 \end_layout
 
 \begin_layout Standard
@@ -15436,7 +15611,7 @@ reference "eq:substack"
 \backslash
 sum_
 \backslash
-mathclap{
+mathclap
 \backslash
 substack
 \begin_inset space \textvisiblespace{}
@@ -15455,6 +15630,81 @@ ein, um die untere Grenze zu erstellen.
 k\,\in\,\mathbb{N}
 }
 }}^{n}k^{-2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wenn mehrere aufeinanderfolgende Operatoren Grenzen haben, sieht der Schriftsatz
+ der Grenzen oft nicht ansprechend aus, wie dieses Beispiel zeigt:
+\begin_inset Formula 
+\[
+\text{a)}\lim_{n\to\infty}\max_{p\ge n}\quad\text{b)}\lim_{n\to\infty}\max_{p^{2}\ge n}\quad\text{c)}\lim_{n\to\infty}\sup_{p^{2}\ge nK}\quad\text{d)}\limsup_{n\to\infty}\max_{p\ge n}
+\]
+
+\end_inset
+
+Um den Schriftsatz zu verbessern, stellt man in den Dokumenteinstellungen
+ unter 
+\family sans
+Mathe-Optionen
+\family default
+ für das Paket 
+\series bold
+mathtools
+\series default
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Pakete ! mathtools
+\end_layout
+
+\end_inset
+
+ die Option 
+\family sans
+Immer
+\begin_inset space ~
+\end_inset
+
+laden
+\family default
+ ein.
+ Nun fügt man direkt vor den ersten Operator denn Befehl 
+\series bold
+
+\backslash
+adjustlimits
+\series default
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Befehle ! A ! 
+\backslash
+adjustlimits
+\end_layout
+
+\end_inset
+
+ ein.
+ Das Beispiel schaut dann so aus:
+\begin_inset Formula 
+\[
+\text{a)}\adjustlimits\lim_{n\to\infty}\max_{p\ge n}\quad\text{b)}\adjustlimits\lim_{n\to\infty}\max_{p^{2}\ge n}\quad\text{c)}\adjustlimits\lim_{n\to\infty}\sup_{p^{2}\ge nK}\quad\text{d)}\adjustlimits\limsup_{n\to\infty}\max_{p\ge n}
 \]
 
 \end_inset
@@ -15551,48 +15801,67 @@ sideset
 \end_inset
 
  können Zeichen vor und nach einen großen Operator gesetzt werden.
- Das Befehlsschema lautet:
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-
-\backslash
-sideset{Zeichen
-\series default
- 
-\series bold
-davor}{Zeichen
-\series default
- 
-\series bold
-dahinter}
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-
-\backslash
-sideset
-\series default
- muss immer vor dem Operator stehen.
- Es kann auch mit mehreren Zeichen und sogar mit anderen Operatoren und
- Symbolen dekoriert werden.
- Will man mit 
-\series bold
-
-\backslash
-sideset
-\series default
- z.
-\begin_inset space \thinspace{}
+Es gibt 4
+\begin_inset space ~
 \end_inset
 
-B.
- nur Zeichen hinter einen großen Operator setzen, schreibt man nichts zwischen
- die ersten geschweiften Klammern, lässt die Klammern aber nicht weg.
+Varianten von 
+\series bold
+
+\backslash
+sideset
+\series default
+:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+
+\backslash
+sideset
+\series default
+ zum Setzen von Zeichen an die Ecken des Operators
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+
+\backslash
+sidesetn
+\series default
+ zum Setzen von Zeichen vor und/oder nach den Operator (diese Variante entsprich
+t LaTeXs originalem 
+\series bold
+
+\backslash
+sideset
+\series default
+ Befehl)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+
+\backslash
+sidesetl
+\series default
+ zum Setzen von Zeichen an die linken Ecken und/oder nach den Operator
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+
+\backslash
+sidesetr
+\series default
+ zum Setzen von Zeichen an die rechten Ecken und/oder vor den Operator
 \end_layout
 
 \begin_layout Standard
@@ -15605,23 +15874,25 @@ B.
 \series bold
 
 \backslash
-sideset{
-\begin_inset Formula $\to$
+sidesetn
+\begin_inset space \textvisiblespace{}
 \end_inset
 
 
 \backslash
-{
-\series default
+sum
+\begin_inset space \textvisiblespace{}
+\end_inset
+
+
+\begin_inset Formula $\to$
+\end_inset
+
 '
-\series bold
-
 \begin_inset Formula $\to$
 \end_inset
 
-
-\backslash
-sum_k=1
+_k=1
 \begin_inset space \textvisiblespace{}
 \end_inset
 
@@ -16790,10 +17061,9 @@ triangleright
 \begin_layout Standard
 Alle binären Operatoren können auch über den Mathe-Werkzeugleistenknopf
  
-\begin_inset Graphics
-	filename ../../images/math/pm.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\pm"
 \end_inset
 
  eingefügt werden.
@@ -17765,10 +18035,9 @@ Mathe\SpecialChar \menuseparator
 Text-Stil
 \family default
  oder den Mathe-Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/math/font.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\font"
 \end_inset
 
  verwenden.
@@ -18192,8 +18461,14 @@ normalsize
 \end_layout
 
 \begin_layout Standard
-Innerhalb einer Formel kann die Größe mit den folgenden Größenbefehlen geändert
- werden:
+Innerhalb einer Formel kann die Größe mit den folgenden Größenbefehlen oder
+ dem Mathe-Werkzeugleistenknopf 
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\style"
+\end_inset
+
+ geändert werden:
 \end_layout
 
 \begin_layout Standard
@@ -18528,10 +18803,9 @@ griechische Buchstaben
 \begin_layout Standard
 Griechischen Buchstaben können auch über den Mathe-Werkzeugleistenknopf
  
-\begin_inset Graphics
-	filename ../../images/math/alpha.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\alpha"
 \end_inset
 
  eingefügt werden.
@@ -20140,17 +20414,15 @@ Symbole
 Viele der im Folgenden aufgelisteten Symbole können auch über die Mathe-Werkzeug\SpecialChar \-
 
 leistenknöpfe 
-\begin_inset Graphics
-	filename ../../images/math/nabla.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\nabla"
 \end_inset
 
  und 
-\begin_inset Graphics
-	filename ../../images/math/digamma.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\digamma"
 \end_inset
 
  eingefügt werden.
@@ -22237,12 +22509,11 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-Alle griechischen Buchstaben können auch über den Mathe-Werkzeugleistenknopf
+Alle folgenden Relationen können auch über den Mathe-Werkzeugleistenknopf
  
-\begin_inset Graphics
-	filename ../../images/math/leq.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\leq"
 \end_inset
 
  eingefügt werden.
@@ -23595,6 +23866,17 @@ triangleright
 \end_layout
 
 \begin_layout Standard
+LyX unterstützt auch viele spezielle Relationen.
+ Drücken Sie den Mathe-Werkzeugleistenknopf 
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\leqq"
+\end_inset
+
+ um eine Liste dieser Relationen zu sehen.
+\end_layout
+
+\begin_layout Standard
 Relationen sind im Gegensatz zu Symbolen immer von Leerraum umgeben.
 \end_layout
 
@@ -24300,10 +24582,9 @@ gcd
 
 \begin_layout Standard
 Sie können auch über den Mathe-Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/math/functions.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\functions"
 \end_inset
 
  eingefügt werden.
@@ -24840,6 +25121,24 @@ In einer abgesetzten Formel steht der Grenzwert wie gewohnt darunter:
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wie man den Schriftsatz von Grenzen einstellt, ist in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Operatorgrenzen"
+
+\end_inset
+
+ erklärt.
 \end_layout
 
 \begin_layout Subsection
@@ -25411,10 +25710,9 @@ Die Zeichen
 \end_inset
 
  können auch über den Mathe-Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/math/digamma.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-insert \\digamma"
 \end_inset
 
  eingefügt werden.
@@ -26668,10 +26966,8 @@ Allgemeines
 \begin_layout Standard
 In LyX werden mehrzeilige Formeln erstellt, wenn man in einer Formel 
 \family sans
-\series bold
 Strg+Enter
 \family default
-\series default
  drückt.
  Dies erzeugt entweder eine 
 \series bold
@@ -26723,10 +27019,9 @@ Strg+Enter
  drückt.
  Um Spalten hinzuzufügen oder zu entfernen, können die Mathe-Werkzeugleistenknöp
 fe 
-\begin_inset Graphics
-	filename ../../images/tabular-feature_append-row.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "inset-modify tabular append-row"
 \end_inset
 
  bzw.
@@ -26734,10 +27029,9 @@ fe
 \end_inset
 
 
-\begin_inset Graphics
-	filename ../../images/tabular-feature_delete-row.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "inset-modify tabular delete-row"
 \end_inset
 
  oder das Menü 
@@ -27613,10 +27907,9 @@ Formelart
 \begin_layout Standard
 Um Spalten hinzuzufügen oder zu entfernen, können die Mathe-Werkzeugleistenknöpf
 e 
-\begin_inset Graphics
-	filename ../../images/tabular-feature_append-column.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "inset-modify tabular append-column"
 \end_inset
 
  bzw.
@@ -27624,10 +27917,9 @@ e
 \end_inset
 
 
-\begin_inset Graphics
-	filename ../../images/tabular-feature_delete-column.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "inset-modify tabular delete-column"
 \end_inset
 
  oder das Menü 
@@ -28596,10 +28888,9 @@ Einfügen\SpecialChar \menuseparator
 Marke
 \family default
  oder dem Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/label-insert.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "label-insert"
 \end_inset
 
  gesetzt.
@@ -28648,10 +28939,9 @@ Einfügen\SpecialChar \menuseparator
 Querverweis
 \family default
  oder dem Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/dialog-show-new-inset_ref.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "dialog-show-new-inset ref"
 \end_inset
 
  eingefügt.
@@ -32182,10 +32472,9 @@ Mathe\SpecialChar \menuseparator
 Makro
 \family default
  oder den Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/math-macro_newmacroname_newcommand.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro newmacroname_newcommand"
 \end_inset
 
  verwendet.
@@ -32240,10 +32529,9 @@ B.
 #1
 \series default
  oder man verwendet den Makro-Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/math-macro-add-param.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-add-param"
 \end_inset
 
 .
@@ -32254,18 +32542,16 @@ B.
 
 Argumente möglich.
  Optionale Argumente werden mit dem Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/math-macro-add-optional-param.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-add-optional-param"
 \end_inset
 
  erstellt.
  Mit dem Werkzeugleistenknopf 
-\begin_inset Graphics
-	filename ../../images/math-macro-make-optional.png
-	scale 85
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-make-optional"
 \end_inset
 
  kann das erste nicht-optionale Argument in ein optionales verwandelt werden.
@@ -32552,10 +32838,9 @@ Die Makro-Werkzeugleiste enthält von links nach rechts die folgenden Knöpfe:
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../images/math-macro-remove-param.png
-	rotateOrigin center
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-remove-param"
 \end_inset
 
 
@@ -32583,10 +32868,9 @@ Letztes Argument entfernen
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../images/math-macro-add-param.png
-	rotateOrigin center
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-add-param"
 \end_inset
 
 
@@ -32614,10 +32898,9 @@ Argument hinzufügen
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../images/math-macro-make-optional.png
-	rotateOrigin center
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-make-optional"
 \end_inset
 
 
@@ -32683,10 +32966,9 @@ Makro-Definition\SpecialChar \menuseparator
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../images/math-macro-make-nonoptional.png
-	rotateOrigin center
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-make-nonoptional"
 \end_inset
 
 
@@ -32733,10 +33015,9 @@ einen nicht-optionales ändern
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../images/math-macro-remove-optional-param.png
-	rotateOrigin center
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-remove-optional-param"
 \end_inset
 
 
@@ -32764,10 +33045,9 @@ Optionales Argument entfernen
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../images/math-macro-add-optional-param.png
-	rotateOrigin center
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-add-optional-param"
 \end_inset
 
 
@@ -32795,10 +33075,9 @@ Optionales Argument einfügen
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../images/math-macro-remove-greedy-param.png
-	rotateOrigin center
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-remove-greedy-param"
 \end_inset
 
 
@@ -32826,10 +33105,9 @@ Letztes Argument rechts entfernen
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../images/math-macro-append-greedy-param.png
-	rotateOrigin center
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-append-greedy-param"
 \end_inset
 
 
@@ -32857,10 +33135,9 @@ Argument von rechts hinzufügen
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../images/math-macro-add-greedy-optional-param.png
-	rotateOrigin center
-
+\begin_inset Info
+type  "icon"
+arg   "math-macro-add-greedy-optional-param"
 \end_inset
 
 
